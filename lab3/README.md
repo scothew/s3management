@@ -20,14 +20,23 @@ Amazon S3 offers the following storage classes:
 
 * GLACIER storage class is suitable for archiving data where data access is infrequent. Archived objects are not available for real-time access. You must first restore the objects before you can access them.
 
- You cannot specify GLACIER as the storage class at the time that you create an object. You transition objects to the GLACIER storage class using lifecycle management. 
+ _Note: You cannot specify GLACIER as the storage class at the time that you create an object. You transition objects to the GLACIER storage class using lifecycle management._ 
 
+## Setting the Storage Class on an Object
+Amazon S3 APIs support setting (or updating) the storage class of objects as follows:
 
+* **When creating a new object** you can add the x-amz-storage-class request header to specify a storage class. If you don't add this header, Amazon S3 uses STANDARD, the default storage class.
+* **Change the storage class of an existing object** by making a copy of the object using the PUT Object - Copy API.
+* **Object Lifecycle Management**
 
+### Changing Storage Class on an Existing Object via the Console
+Click on an object to open up the object details view
+![Storage Classes](/images/3-objectdetails.png)
 
-## Architecture overview
-
-### 1. Step 1
+Click on **Storage Class** to bring up the **Change Storage Class** window
+Click on the radio button for **Standard-IA** and click **save** then **change**
+![Storage Classes](/images/3-changestorageclass.png)
+The updated storage class will now be visible on the object overview page under the **storage class** column
 
 ### 2. Step 2 
 
