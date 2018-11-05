@@ -46,7 +46,18 @@ When you configure an inventory list for a source bucket, you specify the destin
 
 Since the inventory is only generated on a daily basis, in this lab, we will setup inventory, then view an inventory that has already been created.
 
+### Step XYZ - View An Existing Bucket Inventory
+Since the inventory is only generated on a daily or weekly basis, we will view an existing inventory.
+Go to this [Sample Bucket] (https://s3.console.aws.amazon.com/s3/buckets/s3reinvent2018demosourcebucketaccount1/inventory/s3reinvent2018demosourcebucketaccount1/s3reinvent2018demosourcebucketaccount1inventory/data/?region=us-east-1&tab=overview) 
 
+If the URL doesn't work, navigate to s3reinvent2018demosourcebucketaccount1 and go into the Inventory / Data prefix (folder)
+
+You will see a listing of GZip CSV inventory objects like this
+![Inventory CSV](/images/2-inventory-csv.png)
+
+You can download, unzip and view one of the CSV files if you wish.
+It will look similar to this without the column headers
+![Inventory CSV](/images/2-inventory-list.png)
 
 ### Navigation
 [Lab 3](../lab3/README.md) | 
