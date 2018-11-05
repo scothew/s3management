@@ -25,6 +25,6 @@ You will start out by viewing the objects in the source bucket and setting up a 
 
 ### 3. Step 3
 
-### Next Lab
-Lab 2: [](../lab2/README.md)
-Overview: [Back to Overview](../README.md)
+### Navigation
+[Lab 2](../lab2/README.md) | 
+[Back to Overview](../README.md)
