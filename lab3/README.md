@@ -5,10 +5,20 @@ This lab will take you through the process of viewing and setting storage classe
 
 ## Storage Classes
 Each object in Amazon S3 has a storage class associated with it. For example, if you list all objects in the bucket, the console shows the storage class for all the objects in the list.
-![Storage Classes](/images/3-ObjectStorageClass.png)
+![Storage Classes](../images/3-ObjectStorageClass.png)
 
 Amazon S3 offers the following storage classes:
-![Storage Classes](/images/3-storageclasses.png)
+![Storage Classes](../images/3-storageclasses.png)
+
+Storage Class | Durability * | Availability * | Other Considerations
+------------ | ------------- | ------------ | -------------
+STANDARD | 99.999999999% | 99.99% | None
+STANDARD_IA | 99.999999999% | 99.9% | Retrieval fee. Suitable for infrequently accessed data
+ONEZONE_IA | 99.999999999% | 99.5% | Not resilient to the loss of the Availability Zone.
+GLACIER | 99.999999999% | 99.99% (after you restore objects) | Objects must be restored before you can access them
+
+* Designed For Durability and Availability
+
 
 * STANDARD—The default storage class.
 
@@ -31,11 +41,11 @@ Amazon S3 APIs support setting (or updating) the storage class of objects as fol
 
 ### Changing Storage Class on an Existing Object via the Console
 Click on an object to open up the object details view
-![Storage Classes](/images/3-objectdetails.png)
+![Storage Classes](../images/3-objectdetails.png)
 
 Click on **Storage Class** to bring up the **Change Storage Class** window
 Click on the radio button for **Standard-IA** and click **save** then **change**
-![Storage Classes](/images/3-changestorageclass.png)
+![Storage Classes](../images/3-changestorageclass.png)
 The updated storage class will now be visible on the object overview page under the **storage class** column
 
 ### 2. Step 2 
