@@ -4,8 +4,7 @@
 
 This workshop is to demonstrate various storage mangement features of Amazon S3.  
 
-## Lab 1 - Copy S3 Bucket Across AWS Accounts
-[Get started on Lab 1](lab1/README.md)
+## [Lab 1 - Copy S3 Bucket Across AWS Accounts](lab1/README.md)
 
 
 ## Lab 2 - Object Tagging
