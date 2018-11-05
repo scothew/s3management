@@ -2,4 +2,4 @@
 
 This lab will take you through the process of copying an Amazon S3 bucket from one AWS account to another
 
-![S3 Console](images/1-console.png)
+![S3 Console](/images/1-console.png)
