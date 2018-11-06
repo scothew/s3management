@@ -1,4 +1,4 @@
-# Amazon S3 Storage Management - STG209-R2
+# Amazon S3 Storage Management - STG209
 
 ## Introduction
 
