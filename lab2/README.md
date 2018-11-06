@@ -19,9 +19,9 @@ Note the following:
 
 In addition to data classification, tagging offers other benefits such as:
 
- * Object tags enable fine-grained access control of permissions. For example, you could grant an IAM user permissions to read only objects with specific tags using a condition in an IAM policy.
+ * Object tags enable fine-grained access control of permissions. For example, you could grant an IAM user permissions to read only objects with specific tags using a `Condition` in an IAM policy.
  
-  ```json
+  ```JSON5
         "Condition": {
           "StringEquals": {
             "s3:ExistingObjectTag/security": "public"
