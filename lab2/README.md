@@ -1,35 +1,56 @@
 # Lab 2 - Object Tagging and Inventory
 
 ## Introduction
-This lab will take you through the process of tagging objects and setting up S3 Inventory
+This lab will take you through the process of using object tagging, configuring S3 Inventory and viewing an existing inventory.
 
 ## Tagging Overview
-Use object tagging to categorize storage. Each tag is a key-value pair.
-You can add tags to new objects when you upload them or you can add them to existing objects. Note the following:
+Use object tagging to categorize storage. Each tag is a key-value pair that can be assigned during initial upload of an object or to an existing object.
 
-* You can associate up to 10 tags with an object. Tags associated with an object must have unique tag keys.
+ ![Object Tags](../images/2-addtags.png)
 
-* A tag key can be up to 128 Unicode characters in length and tag values can be up to 256 Unicode characters in length.
+Note the following:
 
-* Key and values are case sensitive.
+ * You can associate up to 10 tags with an object. Tags associated with an object must have unique tag keys.
 
-In addition to data classification, tagging offers other benefits. For example,
+ * A tag key can be up to 128 Unicode characters in length and tag values can be up to 256 Unicode characters in length.
 
-* Object tags enable fine-grained access control of permissions. For example, you could grant an IAM user permissions to read only objects with specific tags.
+ * Key and values are case sensitive.
 
-* Object tags enable fine-grained object lifecycle management in which you can specify tag-based filter, in addition to key name prefix, in a lifecycle rule.
 
-* When using Amazon S3 analytics, you can configure filters to group objects together for analysis by object tags, by key name prefix, or by both prefix and tags.
+In addition to data classification, tagging offers other benefits such as:
 
-![Add Tag](/images/2-object-tags.png)
+ * Object tags enable fine-grained access control of permissions. For example, you could grant an IAM user permissions to read only objects with specific tags using a condition in an IAM policy.
+ 
+  ```json
+        "Condition": {
+          "StringEquals": {
+            "s3:ExistingObjectTag/security": "public"
+          }
+  ```
 
-![Key Value Pairs](/images/2-enter-object-tags.png)
+ * Object tags can be used for fine-grained object lifecycle management by specifying a tag-based filter in a lifecycle rule.  
 
-## Lab Steps 
+ * When using Amazon S3 analytics, you can configure filters to group objects together for analysis by object tags, by key name prefix, or by both prefix and tags.
 
-### 1. Step 1
 
-### 2. Step 2 
+## Object Tagging Lab 
+
+1. Go to the S3 console, select your S3 bucket, and go to the Lab2 prefix (folder)
+2. Click to row with the first object _**file001.bin**_ to open up the object properties view. (_Note: if you clicked on the actual file name, it will open up a tabbed view.  Go to the Properties tab, then Tags box_)
+
+3. Click on the word **Tags** to open the tag editor
+
+ ![Object Properties](../images/2-properties-select.png)
+ 
+4. Click the **Add Tag** button and add tags
+
+ ![Object Properties](../images/2-object-tags.png)
+
+
+ ![Object Properties](../images/2-addtags.png)
+5. Click **Save** then **Save Tags**
+
+6. Your object has now been tagged.  Feel free to tag the first 3 objects. 
 
 ### 3. Step 3
 
@@ -39,7 +60,7 @@ Amazon S3 inventory provides comma-separated values (CSV) or Apache optimized ro
 You can query Amazon S3 inventory using standard SQL by using Amazon Athena, Amazon Redshift Spectrum, and other tools such as Presto, Apache Hive, and Apache Spark. It's easy to use Athena to run queries on your inventory files. You can use Athena for Amazon S3 inventory queries in all Regions where Athena is available.
 
 The following is an example CSV inventory list opened in a spreadsheet application. The heading row is shown only to help clarify the example; it is not included in the actual list.
-![Inventory CSV](/images/2-inventory-list.png)
+![Inventory CSV](../images/2-inventory-list.png)
 
 ### 1. Step 1
 When you configure an inventory list for a source bucket, you specify the destination bucket where you want the list to be stored, and whether you want to generate the list daily or weekly. You can also configure what object metadata to include and whether to list all object versions or only current versions.
