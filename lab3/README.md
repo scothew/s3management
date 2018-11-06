@@ -64,7 +64,7 @@ A versioning-enabled bucket can have many versions of the same object, one curre
 3. Give the rule a name and add the prefix **lab3**, click **next**
 ![S3 Management](../images/3b-lifecycle-1.png)
 4. Click the checkmarks for both **Current version** and **Previous version**
-5. Click the ** + Add Transition ** link to add a transition
+5. Click the **+ Add Transition** link to add a transition
 6. Select **Transition to Standard-IA after** It will automatically select "30" for **Days after creation**
 7. Add additional transitions as shown in the graphic
 ![S3 Management](../images/3b-lifecycle-2.png)
