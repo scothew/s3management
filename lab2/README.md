@@ -46,13 +46,15 @@ In addition to data classification, tagging offers other benefits such as:
 
  ![Object Properties](../images/2-object-tags.png)
 
-
  ![Object Properties](../images/2-addtags.png)
+ 
 5. Click **Save** then **Save Tags**
 
 6. Your object has now been tagged.  Feel free to tag the first 3 objects. 
 
-### 3. Step 3
+## Viewing Object Tags
+
+
 
 ## S3 Inventory Overview
 Amazon S3 inventory provides comma-separated values (CSV) or Apache optimized row columnar (ORC) output files that list your objects and their corresponding metadata on a daily or weekly basis for an S3 bucket or a shared prefix.
