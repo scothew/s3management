@@ -18,6 +18,8 @@ GLACIER | 99.999999999% | 99.99% (after you restore objects) | Objects must be r
 
  _Note: You cannot specify GLACIER as the storage class at the time that you create an object. You transition objects to the GLACIER storage class using lifecycle management._ 
 
+ _Note: There is another storage class known as RSS (Reduced Redundancy Storage) but AWS recommends choosing one of the other storage classes_
+
 Pricing for each storage class can be found on the [S3 Pricing Page](https://aws.amazon.com/s3/pricing/)
 
 ## Setting the Storage Class on an Object
@@ -36,12 +38,49 @@ Amazon S3 APIs support setting (or updating) the storage class of objects with t
 Click on **Storage Class** to bring up the **Change Storage Class** window
 Click on the radio button for **Standard-IA** and click **save** then **change**
 ![Storage Classes](../images/3-changestorageclass.png)
-The updated storage class will now be visible on the object overview page under the **storage class** column
+The updated storage class will now be visible on the object overview page under the **storage class** column.
 
-### 2. Step 2 
+### Setting the Storage Class on an Object via AWS CLI CP Command
 
-### 3. Step 3
+While it's possible to set the storage class via the Web Console, this would be cumbersome to accomplish on many files.
 
-### Navigation
-[Lab 2](../lab2/README.md) | 
+If you were using the AWS CLI, the storage class can easily be set with the `storage-class` parameter like this: (you do not need to do this in your lab)
+    `aws s3 cp file004.bin s3://stg209-student-1/lab3/ --storage-class STANDARD_IA`
+
+One of the most common ways to move objects between storage classes is via the built-in lifecycle policies which is covered next.
+
+## Object Lifecycle Management via a Lifecycle Policy
+You can use lifecycle policies to define actions you want Amazon S3 to take during an object's lifetime (for example, transition objects to another storage class, archive them, or delete them after a specified period of time).
+
+A lifecycle configuration is a set of rules that define actions that Amazon S3 applies to a group of objects. There are two types of actions:
+ * **Transition actions** Define when objects transition to another storage class. For example, you might choose to transition objects to the STANDARD_IA storage class 30 days after you created them, or archive objects to the GLACIER storage class one year after creating them.
+ * **Expiration actions** Define when objects should expire and be automaticallyed deleted.
+
+A versioning-enabled bucket can have many versions of the same object, one current version and zero or more noncurrent (previous) versions. Using a lifecycle policy, you can define actions specific to current and noncurrent object versions.
+
+1. Go to the [S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1) and select your S3 bucket
+2. Navigate to the **management** tab and select **Add lifecycle rule**
+![S3 Management](../images/3b-management.png)
+3. Give the rule a name and add the prefix **lab3**, click **next**
+![S3 Management](../images/3b-lifecycle-1.png)
+4. Click the checkmarks for both **Current version** and **Previous version**
+5. Click the ** + Add Transition ** link to add a transition
+6. Select **Transition to Standard-IA after** It will automatically select "30" for **Days after creation**
+7. Add additional transitions as shown in the graphic
+![S3 Management](../images/3b-lifecycle-2.png)
+8. Click **Next**
+9. Select **Previous Versions**
+![S3 Management](../images/3b-lifecycle-3.png)
+10. Click **Next**
+11. Review Settings and click **Save**
+![S3 Management](../images/3b-lifecycle-4.png)
+12. You should now see a summary of your lifecycle policy
+![S3 Management](../images/3b-lifecycle-5.png)
+
+
+## Lab Complete
+Congratulations!  You have completed Lab 3
+
+## Navigation
+[Lab 4](../lab4/README.md) | 
 [Back to Overview](../README.md)
