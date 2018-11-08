@@ -18,7 +18,7 @@ GLACIER | 99.999999999% | 99.99% (after you restore objects) | Objects must be r
 
  _Note: You cannot specify GLACIER as the storage class at the time that you create an object. You transition objects to the GLACIER storage class using lifecycle management._ 
 
- _Note: There is another storage class known as RSS (Reduced Redundancy Storage) but AWS recommends choosing one of the other storage classes_
+ _Note: There is another storage class known as RRS (Reduced Redundancy Storage) but AWS recommends choosing one of the other storage classes_
 
 Pricing for each storage class can be found on the [S3 Pricing Page](https://aws.amazon.com/s3/pricing/)
 
