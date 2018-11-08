@@ -32,7 +32,7 @@ Amazon S3 APIs support setting (or updating) the storage class of objects with t
 ### Changing the Storage Class on an Existing Object via the Console
 1. Go to the [S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1), select your S3 bucket, and go to the Lab3 prefix (folder)
 2. Note that the first three objects have **standard** for their object class.
-3. Click on the first object _**file001.bin**_ to open up the object details view
+3. Select the checkbox to the left of the first object _**file001.bin**_ to open up the object details view
 ![Storage Classes](../images/3-objectdetails.png)
 
 Click on **Storage Class** to bring up the **Change Storage Class** window
