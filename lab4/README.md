@@ -6,7 +6,7 @@ This lab will take you through the process of enabling object versioning, config
 ## Versioning Overview
 Versioning is a data protection mechanism for S3 buckets/objects. Versioning is enabled at the bucket level and is highly recommended as AWS considers it a "best practice". It can be enabled via the console or programatically. This session focuses on the console.
 
- ![Version Console](../images/4-versioning-1.png)
+ ![Version View](../images/4-versioning-1.png)
 
 Note the following:
 
@@ -21,6 +21,11 @@ Note the following:
 2. Click on "Versioning", select "Enable versioning", click "Save"
 
  ![Enable Versioning](../images/4-versioning-2.png)
+
+
+
+
+
 
 
 This lab will show how to copy objects from one AWS account to another.
