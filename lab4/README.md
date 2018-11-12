@@ -58,23 +58,29 @@ CRR is a bucket level feature that allows for asynchronous replication of object
 
  ![Identify Source Dest](../images/4-crr-6.png)
 
+
 3. Navigate to the "Management" tab of the source bucket and choose Relication and click on "+ Add Rule"
 
  ![Start Replication](../images/4-crr-7.png)
- 
+
+
 4. Set source to Entire bucket. Leave encrypted with AWS KMS blank. Click "Next"
 
  ![Set Source](../images/4-crr-8.png)
  
+ 
 5. Set Destination bucket (same account) to (stg209-crr-student-x). Leave Options blank. Click "Next"
+
 
 6. Configure options...Choose IAM role - "Create new role". Type Rule name - "s3-crr-student#". Click "Next"
 
  ![Replication Rule](../images/4-crr-9.png)
 
+
 7. Review Source, Destination, Options and Click "Save"
 
  ![Replication Review](../images/4-crr-10.png)
+
 
 8. Remember...CRR only replicates "new" PUTs and Objects. Copy and paste several directories to / from in your source.  You will now notice replicated files in your destination bucket.
 
