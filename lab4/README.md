@@ -17,11 +17,14 @@ Note the following:
 
 ## Versioning Lab
 
-1. Go to the S3 console, select your S3 bucket, click on "Properties" tab
+1. Go to the S3 console, select your S3 bucket (stg209-student-x), click on "Properties" tab
 2. Click on "Versioning", select "Enable versioning", click "Save"
 
  ![Enable Versioning](../images/4-versioning-2.png)
 
+3. Enter S3 bucket (stg209-student-x) and navigate to prefix (folder) "lab4/version1". Click on Versions "Show" to observe the current state of the files in this folder.
+
+ ![View Versions](../images/4-versioning-3.png)
 
 
 
