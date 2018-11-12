@@ -26,6 +26,13 @@ Note the following:
 
  ![View Versions](../images/4-versioning-3.png)
 
+As you can see, there is only one version of each file. Feel free to open any txt file.  It will read "This is version 1"
+
+4. Re-enter the S3 bucket and navigate to the other folder "lab4/version2". Select the files and click Copy.
+
+ ![Copy Version1](../images/4-versioning-4.png)
+ 
+ 
 
 
 
