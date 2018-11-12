@@ -8,7 +8,7 @@ Versioning is a data protection mechanism for S3 buckets/objects. Versioning is 
 
  ![Version View](../images/4-versioning-1.png)
 
-Note the following:
+**Note the following:**
 
 * Protects against unintended deletes (think Recycle Bin)
 * No performance penalty
@@ -50,9 +50,9 @@ This concludes "Versioning".  Are there any questions?
 ## Cross Region Replication (CRR) Overview
 CRR is a bucket level feature that allows for asynchronous replication of objects in different regions.  Source and destination can be same or different accounts. Only new Objects or Puts will be replicated. Deletes and Lifecycle Policies will not be replicated.  All data in transit is encrypted (SSL,TLS).
 
-* Use cases: Compliance, Latency, Operational, Security.
-* Requirements: Versioning (source/dest), Different Regions (source/dest), Permissions (replication)
-* Updates: Overwrite ownership (two diff owners), Different storage class, Bi-directional, Independent Lifecycle Policies
+* **Use cases:** Compliance, Latency, Operational, Security.
+* **Requirements:** Versioning (source/dest), Different Regions (source/dest), Permissions (replication)
+* **Updates:** Overwrite ownership (two diff owners), Different storage class, Bi-directional, Independent Lifecycle Policies
 
 
 ## Cross Region Replication Lab
