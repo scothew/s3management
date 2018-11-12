@@ -4,13 +4,12 @@
 This lab will take you through the process of enabling object versioning, configuring CRR (Cross Region Replication), and facilitating event driven notifications.
 
 ## Versioning Overview
-Versioning is a data protection mechanism for S3 buckets/objects. Versioning is enabled at the bucket level and is highly recommended as AWS considers it a "best practice".
-It can be enabled via the console or programatically.
+Versioning is a data protection mechanism for S3 buckets/objects. Versioning is enabled at the bucket level and is highly recommended as AWS considers it a "best practice". It can be enabled via the console or programatically. This session focuses on the console.
 
  ![Object Tags](../images/4-versioning-1.png)
 
-Feature: Protects against unintended deletes, No performance penalty, Easy retrieval of deleted objects, New version for every upload (no storage savings).
-Lifecycle policies can be used to help clean up older version and move data to different storage classes.
+Highlights: Protects against unintended deletes (Recycle Bin), No performance penalty, Easy retrieval of deleted objects.
+Integrates well with Lifecycle policies to help clean up older versions and move data to different storage classes.
 
 ## Lab Overview
 This lab will show how to copy objects from one AWS account to another.
