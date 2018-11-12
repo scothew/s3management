@@ -28,10 +28,6 @@ Note the following:
 
 
 
-This lab will show how to copy objects from one AWS account to another.
-You will start out by viewing the objects in the source bucket and setting up a bucket policy.
-![S3 Console](/images/1-console.png)
-
 ## Architecture Overview
 
 
