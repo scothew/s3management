@@ -17,25 +17,25 @@ Versioning is a data protection mechanism for S3 buckets/objects. Versioning is 
 
 ## Versioning Lab
 
-1. Go to the S3 console, select your S3 bucket (stg209-student-x), click on "Properties" tab
+1. Go to the S3 console, select your S3 bucket **(stg209-student-x)**, click on "Properties" tab
 2. Click on "Versioning", select "Enable versioning", click "Save"
 
  ![Enable Versioning](../images/4-versioning-2.png)
 
 
-3. Enter S3 bucket (stg209-student-x) and navigate to prefix (folder) "lab4/version1". Click on Versions "Show" to observe the current state of the files in this folder.
+3. Enter S3 bucket **(stg209-student-x)** and navigate to prefix (folder) **"lab4/version1"**. Click on Versions "Show" to observe the current state of the files in this folder.
 
  ![View Versions](../images/4-versioning-3.png)
 
 
-As you can see, there is only one version of each file. Feel free to open any txt file.  It will read "This is version 1"
+As you can see, there is only one version of each file. Feel free to open any txt file.  It will read **"This is version 1"**
 
-4. Re-enter the S3 bucket and navigate to the other folder "lab4/version2". Select the files and click Copy.
+4. Re-enter the S3 bucket and navigate to the other folder **"lab4/version2"**. Select the files and click Copy.
 
  ![Copy Version1](../images/4-versioning-4.png)
  
  
-5. Navigate back to folder "lab4/version1" and choose Actions "Paste" to write the contents to the folder.
+5. Navigate back to folder **"lab4/version1"** and choose Actions "Paste" to write the contents to the folder.
 
 
 6. Click on Versions "Show". You will notice that you now have multiple versions of the same file.
@@ -57,27 +57,27 @@ CRR is a bucket level feature that allows for asynchronous replication of object
 
 ## Cross Region Replication Lab
 
-1. Versioning is required in both buckets (source/dest).  Please enable "Versioning" on your destination CRR bucket.  It will be named as follows (stg209-crr-student-x).
+1. Versioning is required in both buckets (source/dest).  Please enable "Versioning" on your destination CRR bucket.  It will be named as follows **(stg209-crr-student-x)**.
 
-2. Identify your (source/dest) buckets and ensure requirements are met (Versioning, Diff Regions, Permissions).
+2. Identify your **(source/dest)** buckets and ensure requirements are met **(Versioning, Diff Regions, Permissions)**.
 
  ![Identify Source Dest](../images/4-crr-6.png)
 
 
-3. Navigate to the "Management" tab of the source bucket and choose Relication and click on "+ Add Rule"
+3. Navigate to the "Management" tab of the source bucket and choose Relication and click on **"+ Add Rule"**
 
  ![Start Replication](../images/4-crr-7.png)
 
 
-4. Set source to Entire bucket. Leave encrypted with AWS KMS blank. Click "Next"
+4. Set source to Entire bucket. Do not check "encrypted with AWS KMS". Click "Next"
 
  ![Set Source](../images/4-crr-8.png)
  
 
-5. Set Destination bucket (same account) to (stg209-crr-student-x). Leave Options blank. Click "Next"
+5. Set Destination bucket (same account) to **(stg209-crr-student-x)**. Leave Options blank. Click "Next"
 
 
-6. Configure options...Choose IAM role - "Create new role". Type Rule name - "s3-crr-student#". Click "Next"
+6. Configure options...Choose IAM role - "Create new role". Type Rule name - **"s3-crr-student#"**. Click "Next"
 
  ![Replication Rule](../images/4-crr-9.png)
 
