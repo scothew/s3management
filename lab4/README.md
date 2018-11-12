@@ -45,19 +45,24 @@ This concludes "Versioning".  Are there any questions before we move on?
 ## Cross Region Replication (CRR) Overview
 CRR is a bucket level feature that allows for asynchronous replication of objects in different regions.  Source and destination can be same or different accounts. Only new Objects or Puts will be replicated. Deletes and Lifecycle Policies will not be replicated.  All data in transit is encrypted (SSL,TLS).
 
-Use cases: Compliance, Latency, Operational, Security.
+* Use cases: Compliance, Latency, Operational, Security.
+* Requirements: Versioning (source/dest), Different Regions (source/dest), Permissions (replication)
+* Updates: Overwrite ownership (two diff owners), Different storage class, Bi-directional, Independent Lifecycle Policies
 
-Requirements: Versioning, Different Regions (source/dest), Permissions (replication)
-
-Updates: Overwrite ownership (two diff owners), Supports SSE-KMS objects, Different storage class, Bi-directional, Independent Lifecycle Policies
-Entire bucket or prefix based, Object ACL and tags
 
 ## Cross Region Replication Lab
 
+1. Versioning is required in both buckets (source/dest).  Please enable "Versioning" on your destination CRR bucket.  It will be named as follows (stg209-crr-student-x).
+
+2. Identify your (source/dest) buckets and ensure requirements are met (Versioning, Diff Regions, Permissions).
+
+ ![Identify Source Dest](../images/4-versioning-6.png)
 
 
 
-### Navigation
+
+
+
 
 
 [Back to Overview](../README.md)
