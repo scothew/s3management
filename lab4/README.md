@@ -42,6 +42,17 @@ Feel free to open both versions of the same file. The "Latest" will read "This i
 
 This concludes "Versioning".  Are there any questions before we move on?
 
+## Cross Region Replication (CRR) Overview
+CRR is a bucket level feature that allows for asynchronous replication of objects in different regions.  Source and destination can be same or different accounts. Only new Objects or Puts will be replicated. Deletes and Lifecycle Policies will not be replicated.  All data in transit is encrypted (SSL,TLS).
+
+Use cases: Compliance, Latency, Operational, Security.
+
+Requirements: Versioning, Different Regions (source/dest), Permissions (replication)
+
+Updates: Overwrite ownership (two diff owners), Supports SSE-KMS objects, Different storage class, Bi-directional, Independent Lifecycle Policies
+Entire bucket or prefix based, Object ACL and tags
+
+## Cross Region Replication Lab
 
 
 
