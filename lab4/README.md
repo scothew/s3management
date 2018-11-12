@@ -22,9 +22,11 @@ Note the following:
 
  ![Enable Versioning](../images/4-versioning-2.png)
 
+
 3. Enter S3 bucket (stg209-student-x) and navigate to prefix (folder) "lab4/version1". Click on Versions "Show" to observe the current state of the files in this folder.
 
  ![View Versions](../images/4-versioning-3.png)
+
 
 As you can see, there is only one version of each file. Feel free to open any txt file.  It will read "This is version 1"
 
@@ -32,13 +34,16 @@ As you can see, there is only one version of each file. Feel free to open any tx
 
  ![Copy Version1](../images/4-versioning-4.png)
  
+ 
 5. Navigate back to folder "lab4/version1" and choose Actions "Paste" to write the contents to the folder.
+
 
 6. Click on Versions "Show". You will notice that you now have multiple versions of the same file.
 
  ![Display Versions](../images/4-versioning-5.png)
  
-Feel free to open both versions of the same file. The "Latest" will read "This is version 2". The "Older" will read "This is version 1".  If you delete the "Latest" version of a file, it will promote the Older to "Latest".  
+ 
+7. Open both versions of the same file. The "Latest" will read "This is version 2". The "Older" will read "This is version 1".  If you delete the "Latest" version of a file, it will promote the Older to "Latest".  
 
 This concludes "Versioning".  Are there any questions?
 
@@ -85,18 +90,3 @@ CRR is a bucket level feature that allows for asynchronous replication of object
 8. Remember...CRR only replicates "new" PUTs and Objects. Copy and paste several directories to / from in your source.  You will now notice replicated files in your destination bucket.
 
 This concludes "Cross Region Replication".  Are there any questions?
- 
- 
-
-
- 
- 
-
-
-
-
-
-
-
-
-[Back to Overview](../README.md)
