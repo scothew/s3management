@@ -3,7 +3,7 @@
 ## Introduction
 This lab demonstrates the use of Amazon S3 Analytics Storage Class Analysis feature for making decisions on data life cycle management policies.
 
-By using Amazon S3 analytics storage class analysis you can analyze storage access patterns to help you decide when to transition the right data to the right storage class. This feature determines when to transition less frequently accesses data from STANDARD storage to the STANDARD_IA (IA,for infrequesnt access). For more information about storage classes, see [Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html).
+By using Amazon S3 analytics storage class analysis you can analyze storage access patterns to help you decide when to transition the right data to the right storage class. This feature determines when to transition less frequently accesses data from STANDARD storage to the STANDARD_IA (infrequent access).
 
 You can use the storage class analysis results for improving the lifecycle policies. You can configure storage class analysis to analyze all the objects in a bucket or you can configure filters to group objects together for analysis by common prefix, by object tags or by both prefix and tags. 
 
@@ -35,13 +35,10 @@ You can use the Amazon S3 console, the REST API, or the AWS CLI or AWS SDKs to c
 
 5. The Prefix/tag field allows you to filter based on a prefix name or a tag value.  Type **DepartmentCode**, hit the **Down Arrow** to select "tag" and press **enter**. Type for **00432** for the tag value, then hit **enter**
 
-![Object Properties](../images/SA-storage-class-analysis-prefix.png)
-
-6. If you chose tag, enter a value for the tag. You can enter one prefix and multiple tags. The below example TestFilter, is applied on all the objects tagged with DepartmentCode=00432.
-
 ![Object Properties](../images/SA-storage-class-analysis-tag.png)
 
-7. Click **Save**
+6. Click **Save**
+7. The Storage Class Analysis will take some time to run.  Since this is a sample bucket without any live traffic, we will view a sample of existing storage class analysis.
 
 <!--7. On the same pane, choose Export data to export analysis reports to a comma-separated values (.csv) flat file. Specify the destination bucket as **s3reinvent2018demosourcebucketaccount1** and provide the prefix **storageanalysis/your-bucket-name>**. Here is an example showing the details for student-1 - 
   
@@ -51,6 +48,7 @@ Note: The destination bucket must be in the same AWS Region as the bucket for wh
 
 8. Choose *Save* -->
 
+
 # Amazon S3 - Metrics Configurations for Buckets
 
 ## Introduction
@@ -58,7 +56,7 @@ This lab demonstrates the use of Amazon S3 Metrics Configurations for Buckets th
 
 There are two ways that you can use CloudWatch with Amazon S3. 
 
-* **Daily Storage Metrics for Buckets** - This features provides details on the storage utilization on the bucket level. More speficically, you will be able to get details on the average amount of data stored in a buckets in bytes and total number of objects stored in a bucket. The storage metrics are available for STANDARD storage class, STANDARD_IA storage class, ONEZONE_IA, Reduced Redundancy Storage (RRS) storage class and Glacier (GLACIER) storage class.This feature is turned ON by default and is reported daily with no additional charge.
+* **Daily Storage Metrics for Buckets** - This features provides details on the storage utilization on the bucket level. More specifically, you will be able to get details on the average amount of data stored in a buckets in bytes and total number of objects stored in a bucket. The storage metrics are available for STANDARD storage class, STANDARD_IA storage class, ONEZONE_IA, Reduced Redundancy Storage (RRS) storage class and Glacier (GLACIER) storage class. This feature is ON by default and is reported daily with no additional charge.
 
 * **Request metrics** - CloudWatch request metrics for Amazon S3, lets you quickly identify and act on operational issues by providing 1-minute Cloudwatch metrics at the Amazon S3 bucket-level, by default. Cloudwatch request metrics for the objects in a bucket will be available by creating **metric configurations** for a bucket. You can also define a filter for the metrics collected using a shared prefix or object tags, allowing you to align metrics filters to specific business applications, workflows, or internal organizations.
  
