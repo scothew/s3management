@@ -73,9 +73,9 @@ CRR is a bucket level feature that allows for asynchronous replication of object
 
  ![Set Source](../images/4-crr-8.png)
  
- 
+``` 
 5. Set Destination bucket (same account) to (stg209-crr-student-x). Leave Options blank. Click "Next"
-
+```
 
 6. Configure options...Choose IAM role - "Create new role". Type Rule name - "s3-crr-student#". Click "Next"
 
