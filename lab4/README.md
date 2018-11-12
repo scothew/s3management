@@ -8,12 +8,12 @@ Versioning is a data protection mechanism for S3 buckets/objects. Versioning is 
 
  ![Object Tags](../images/4-versioning-1.png)
 
-Features:
+Note the following:
 
-Protects against unintended deletes (think Recycle Bin)
-No performance penalty
-Easy retrieval of deleted objects.
-Integrates well with Lifecycle policies to help clean up older versions and move data to different storage classes.
+* Protects against unintended deletes (think Recycle Bin)
+* No performance penalty
+* Easy retrieval of deleted objects.
+* Lifecycle policies assist "versioning" with variant control, clean up, and storage class mobility
 
 ## Lab Overview
 This lab will show how to copy objects from one AWS account to another.
