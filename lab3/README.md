@@ -37,17 +37,19 @@ You can use the Amazon S3 console, the REST API, or the AWS CLI or AWS SDKs to c
 
 ![Object Properties](../images/SA-storage-class-analysis-prefix.png)
 
-6. If you chose tag, enter a value for the tag. You can enter one prefix and multiple tags. The below example TestFilter,is applied on all the objects tagged with DepartmentCode=00432.
+6. If you chose tag, enter a value for the tag. You can enter one prefix and multiple tags. The below example TestFilter, is applied on all the objects tagged with DepartmentCode=00432.
 
 ![Object Properties](../images/SA-storage-class-analysis-tag.png)
 
-7. On the same pane, choose Export data to export analysis reports to a comma-separated values (.csv) flat file. Specify the destination bucket as **s3reinvent2018demosourcebucketaccount1** and provide the prefix **storageanalysis/your-bucket-name>**. Here is an example showing the details for student-1 - 
+7. Click **Save**
+
+<!--7. On the same pane, choose Export data to export analysis reports to a comma-separated values (.csv) flat file. Specify the destination bucket as **s3reinvent2018demosourcebucketaccount1** and provide the prefix **storageanalysis/your-bucket-name>**. Here is an example showing the details for student-1 - 
   
 ![Object Properties](../images/SA-storage-class-analysis-export-1.png)   
 
 Note: The destination bucket must be in the same AWS Region as the bucket for which you are setting up the analysis. The destination bucket can be in a different AWS account.
 
-8. Choose *Save*
+8. Choose *Save* -->
 
 # Amazon S3 - Metrics Configurations for Buckets
 
