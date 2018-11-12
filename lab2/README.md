@@ -4,7 +4,7 @@
 This lab will take you through the process of viewing and setting storage classes on an object and setting up lifecycle policies.
 
 ## Storage Classes
-Each object in Amazon S3 has a storage class associated with it. For example, if you list all objects in the bucket, the console shows the storage class for all the objects in the list.
+Every object in Amazon S3 has a storage class associated with it. By default, objects are in the STANDARD class.  When using the S3 Management Console, when you list objects in the bucket, the console shows the storage class.
 ![Storage Classes](../images/3-ObjectStorageClass.png)
 
 Amazon S3 offers the following storage classes:
@@ -61,7 +61,7 @@ A versioning-enabled bucket can have many versions of the same object, one curre
 1. Go to the [S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1) and select your S3 bucket (e.g **stg209-student-N**)
 2. Navigate to the **Management** tab and select **Add lifecycle rule**
 ![S3 Management](../images/3b-management.png)
-3. Give the rule a name and add the prefix **lab2**, click **next**
+3. **Give the rule a name** and add the **prefix lab2**, click **next**
 ![S3 Management](../images/3b-lifecycle-1.png)
 4. Click the checkmarks for both **Current version** and **Previous version**
 5. Click the **+ Add Transition** link to to add a transition "**for current versions of objects**"
