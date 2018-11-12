@@ -62,6 +62,19 @@ CRR is a bucket level feature that allows for asynchronous replication of object
 
  ![Start Replication](../images/4-crr-7.png)
  
+4. Set source to Entire bucket. Leave encrypted with AWS KMS blank. Click "Next"
+
+ ![Set Source](../images/4-crr-8.png)
+ 
+5. Set Destination bucket (same account) to (stg209-crr-student-x). Leave Options blank. Click "Next"
+
+6. Configure options...Choose IAM role - "Create new role". Type Rule name - "s3-crr-student#". Click "Next"
+
+ ![Replication Rule](../images/4-crr-9.png)
+
+
+ 
+ 
 
 
 
