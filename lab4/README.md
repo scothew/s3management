@@ -40,7 +40,7 @@ As you can see, there is only one version of each file. Feel free to open any tx
  
 Feel free to open both versions of the same file. The "Latest" will read "This is version 2". The "Older" will read "This is version 1".  If you delete the "Latest" version of a file, it will promote the Older to "Latest".  
 
-This concludes "Versioning".  Are there any questions before we move on?
+This concludes "Versioning".  Are there any questions?
 
 ## Cross Region Replication (CRR) Overview
 CRR is a bucket level feature that allows for asynchronous replication of objects in different regions.  Source and destination can be same or different accounts. Only new Objects or Puts will be replicated. Deletes and Lifecycle Policies will not be replicated.  All data in transit is encrypted (SSL,TLS).
@@ -71,6 +71,16 @@ CRR is a bucket level feature that allows for asynchronous replication of object
 6. Configure options...Choose IAM role - "Create new role". Type Rule name - "s3-crr-student#". Click "Next"
 
  ![Replication Rule](../images/4-crr-9.png)
+
+7. Review Source, Destination, Options and Click "Save"
+
+ ![Replication Review](../images/4-crr-10.png)
+
+8. Remember...CRR only replicates "new" PUTs and Objects. Copy and paste several directories to / from in your source.  You will now notice replicated files in your destination bucket.
+
+This concludes "Cross Region Replication".  Are there any questions?
+ 
+ 
 
 
  
