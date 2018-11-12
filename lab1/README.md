@@ -1,27 +1,24 @@
 # Lab 1 - Object Tagging and Inventory
 
 ## Introduction
-This lab will take you through object tagging and inventory
+This lab will take you through the process of using object tagging, configuring S3 Inventory and viewing an existing inventory.
 
 ## Getting Started
 
 ### Log into AWS account and navigate to S3 Console
 Log into the AWS account using the URL and credentials provided to you by the presenter
 
-[AWS Console](https://241417343503.signin.aws.amazon.com/console)
+Right click on the AWS Console link below and **open in new tab**
+[AWS Console](https://241417343503.signin.aws.amazon.com/console) 
 
 _Note: Each attendee has their own S3 bucket that they will be working with.  Your IAM user only has access to your own bucket._
 
-Navigate to the [S3 Console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1 ) and click on the bucket that has been assigned to you. Make sure you use the bucket name without CRR for most of the labs (e.g. **stg209-student-1**)
+Navigate to the S3 Console **Services -> Amazon S3**
 
-## Lab Overview
-
+You should see a list of buckets like this:
 ![S3 Console](../images/1-console.png)
 
-# Part 2 - Object Tagging and Inventory
-
-## Introduction
-This lab will take you through the process of using object tagging, configuring S3 Inventory and viewing an existing inventory.
+Unless otherwise specified in the instructions, make sure you use the bucket assigned to you and without "CRR" in the bucket name.  (e.g. **stg209-student-1**)
 
 ## Tagging Overview
 Use object tagging to categorize storage. Each tag is a key-value pair that can be assigned during initial upload of an object or to an existing object.
@@ -55,22 +52,25 @@ In addition to data classification, tagging offers other benefits such as:
 
 ## Object Tagging Lab 
 
-1. Go to the S3 console, select your S3 bucket, and go to the Lab2 prefix (folder)
+1. Go to the **S3 console**, **select your S3 bucket** (e.g. **stg209-student-#**), and **go to the Lab1 prefix** (folder)
+
 2. Click to row with the first object _**file001.bin**_ to open up the object properties view. (_Note: if you clicked on the actual file name, it will open up a tabbed view.  Go to the Properties tab, then Tags box_)
 
 3. Click on the word **Tags** to open the tag editor
 
  ![Object Properties](../images/2-properties-select.png)
  
-4. Click the **Add Tag** button and add tags
+4. Click the **Add Tag** button
 
  ![Object Properties](../images/2-object-tags.png)
 
+5. Add some tags to the objects as shown in the image
+
  ![Object Properties](../images/2-addtags.png)
  
-5. Click **Save** then **Save Tags**
+6. Click **Save** then **Save Tags**
 
-6. Your object has now been tagged.  Feel free to tag the first 3 objects. 
+7. Your object has now been tagged.  Feel free to tag the first 3 objects. 
 
 ## Viewing Object Tags
 
@@ -103,7 +103,7 @@ It will look similar to this without the column headers
 ![Inventory CSV](/images/2-inventory-list.png)
 
 ## Lab Complete
-Congratulations!  You have completed Lab 2
+Congratulations!  You have completed Lab 1
 
 ## Navigation
 [Lab 2](../lab2/README.md) | 
