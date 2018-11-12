@@ -56,7 +56,7 @@ CRR is a bucket level feature that allows for asynchronous replication of object
 
 2. Identify your (source/dest) buckets and ensure requirements are met (Versioning, Diff Regions, Permissions).
 
- ![Identify Source Dest](../images/4-versioning-6.png)
+ ![Identify Source Dest](../images/4-versioning-7.png)
 
 
 
