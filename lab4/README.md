@@ -1,7 +1,7 @@
-# Lab 4 - Versioning, Cross Region Replication, and Events
+# Lab 4 - Versioning and Cross Region Replication
 
 ## Introduction
-This lab will take you through the process of enabling object versioning, configuring CRR (Cross Region Replication), and facilitating event driven notifications.
+This lab will take you through the process of enabling object versioning and configuring CRR (Cross Region Replication).
 
 ## Versioning Overview
 Versioning is a data protection mechanism for S3 buckets/objects. Versioning is enabled at the bucket level and is highly recommended as AWS considers it a "best practice". It can be enabled via the console or programatically. This session focuses on the console.
