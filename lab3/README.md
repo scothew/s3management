@@ -89,16 +89,7 @@ You have now created a metrics configuration for all the objects in an Amazon S3
 
 ## Lab Complete
 
-Congratulations! You have completed the lab on Amazon S3 Analytics – Storage Class Analysis and Metrics Configurations for Buckets.
-
-
-
-
-
-
-
-<!--## Lab Complete
-Congratulations!  You have completed Lab 3-->
+Congratulations! You have completed the Lab 3.
 
 ## Navigation
 [Lab 4](../lab4/README.md) | 

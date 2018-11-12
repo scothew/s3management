@@ -102,6 +102,9 @@ You can download, unzip and view one of the CSV files if you wish.
 It will look similar to this without the column headers
 ![Inventory CSV](/images/2-inventory-list.png)
 
-### Navigation
+## Lab Complete
+Congratulations!  You have completed Lab 2
+
+## Navigation
 [Lab 2](../lab2/README.md) | 
 [Back to Overview](../README.md)

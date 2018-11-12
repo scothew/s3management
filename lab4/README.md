@@ -89,4 +89,14 @@ CRR is a bucket level feature that allows for asynchronous replication of object
 
 8. Remember...CRR only replicates "new" PUTs and Objects. Copy and paste several directories to / from in your source.  You will now notice replicated files in your destination bucket.
 
-This concludes "Cross Region Replication".  Are there any questions?
+## Lab Complete
+
+Congratulations! You have completed the Lab 4.
+
+This ends the lab portion of this session.
+
+**Please remember to fill out your survey!**
+
+## Navigation
+[Back to Overview](../README.md)
+
