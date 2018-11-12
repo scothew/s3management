@@ -56,7 +56,12 @@ CRR is a bucket level feature that allows for asynchronous replication of object
 
 2. Identify your (source/dest) buckets and ensure requirements are met (Versioning, Diff Regions, Permissions).
 
- ![Identify Source Dest](../images/4-versioning-6.png)
+ ![Identify Source Dest](../images/4-crr-6.png)
+
+3. Navigate to the "Management" tab of the source bucket and choose Relication and click on "+ Add Rule"
+
+ ![Start Replication](../images/4-crr-7.png)
+ 
 
 
 
