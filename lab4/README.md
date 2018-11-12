@@ -32,29 +32,17 @@ As you can see, there is only one version of each file. Feel free to open any tx
 
  ![Copy Version1](../images/4-versioning-4.png)
  
-5. Navigate back to folder "lab4/version1" and choose Actions "Paste" to overwrite the contents of the folder.
+5. Navigate back to folder "lab4/version1" and choose Actions "Paste" to write the contents to the folder.
 
-Click on Versions "Show". You will notice that you now have multiple versions of the same file.
+6. Click on Versions "Show". You will notice that you now have multiple versions of the same file.
 
  ![Display Versions](../images/4-versioning-5.png)
-
-
  
- 
+Feel free to open both versions of the same file. The "Latest" will read "This is version 2".
+
+This concludes "Versioning".  Are there any questions before we move on?
 
 
-
-
-
-## Architecture Overview
-
-
-
-### 1. Step 1
-
-### 2. Step 2 
-
-### 3. Step 3
 
 
 
