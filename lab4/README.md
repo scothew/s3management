@@ -43,7 +43,7 @@ As you can see, there is only one version of each file. Feel free to open any tx
  ![Display Versions](../images/4-versioning-5.png)
  
  
-7. Open both versions of the same file. The "Latest" will read "This is version 2". The "Older" will read "This is version 1".  If you delete the "Latest" version of a file, it will promote the Older to "Latest".  
+7. Open both versions of the same file. The "Latest" will read **"This is version 2"**. The "Older" will read **"This is version 1"**.  If you delete the "Latest" version of a file, it will promote the Older to "Latest".  
 
 This concludes "Versioning".  Are there any questions?
 
