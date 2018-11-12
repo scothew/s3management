@@ -1,9 +1,4 @@
-# Lab 3 - Storage Classes and Lifecycle Management
-
-## Introduction
-This lab will take you through the process of viewing and setting storage classes on an object and setting up lifecycle policies.
-
-# Amazon S3 Analytics - Storage Class Analysis
+# Lab 3 - Amazon S3 Analytics and Metrics 
 
 ## Introduction
 This lab demonstrates the use of Amazon S3 analytics storage class analysis feature for making decisions on data life cycle management policies.
