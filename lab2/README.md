@@ -30,7 +30,7 @@ Amazon S3 APIs support setting (or updating) the storage class of objects with t
 * **Object Lifecycle Management**
 
 ### Changing the Storage Class on an Existing Object via the Console
-1. Go to the [S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1), select your S3 bucket, and go to the Lab3 prefix (folder)
+1. Go to the [S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1), select your S3 bucket (e.g **stg209-student-N**), and go to the Lab2 prefix (folder)
 2. Note that the first three objects have **standard** for their object class.
 3. Select the checkbox to the left of the first object _**file001.bin**_ to open up the object details view
 ![Storage Classes](../images/3-objectdetails.png)
@@ -45,7 +45,7 @@ The updated storage class will now be visible on the object overview page in the
 While it's possible to set the storage class via the S3 console, this would be cumbersome to accomplish on many files.
 
 If you were using the AWS CLI, the storage class can easily be set with the `storage-class` parameter like this: (you do not need to do this in your lab)
-    `aws s3 cp file004.bin s3://stg209-student-1/lab3/ --storage-class STANDARD_IA`
+    `aws s3 cp file004.bin s3://stg209-student-1/lab2/ --storage-class STANDARD_IA`
 
 One of the most common ways to move objects between storage classes is via the built-in lifecycle policies which is covered next.
 
@@ -58,13 +58,13 @@ A lifecycle configuration is a set of rules defining actions that Amazon S3 appl
 
 A versioning-enabled bucket can have many versions of the same object, one current version and zero or more non-current (previous) versions. Using a lifecycle policy, you can define actions specific to current and non-current object versions.
 
-1. Go to the [S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1) and select your S3 bucket
-2. Navigate to the **management** tab and select **Add lifecycle rule**
+1. Go to the [S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1) and select your S3 bucket (e.g **stg209-student-N**)
+2. Navigate to the **Management** tab and select **Add lifecycle rule**
 ![S3 Management](../images/3b-management.png)
-3. Give the rule a name and add the prefix **lab3**, click **next**
+3. Give the rule a name and add the prefix **lab2**, click **next**
 ![S3 Management](../images/3b-lifecycle-1.png)
 4. Click the checkmarks for both **Current version** and **Previous version**
-5. Click the **+ Add Transition** link to to add a transition "for current versions of objects"
+5. Click the **+ Add Transition** link to to add a transition "**for current versions of objects**"
 6. Select **Transition to Standard-IA after** It will automatically select "30" for **Days after creation**
 7. Add additional transitions as shown in the graphic
 ![S3 Management](../images/3b-lifecycle-2.png)

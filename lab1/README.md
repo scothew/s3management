@@ -12,7 +12,7 @@ Log into the AWS account using the URL and credentials provided to you by the pr
 
 _Note: Each attendee has their own S3 bucket that they will be working with.  Your IAM user only has access to your own bucket._
 
-Navigate to the [S3 Console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1 ) and click on the bucket that has been assigned to you.
+Navigate to the [S3 Console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1 ) and click on the bucket that has been assigned to you. Make sure you use the bucket name without CRR for most of the labs (e.g. **stg209-student-1**)
 
 ## Lab Overview
 
