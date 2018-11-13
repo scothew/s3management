@@ -46,8 +46,6 @@ Note: The destination bucket must be in the same AWS Region as the bucket for wh
 
 ## Results from Storage Class Analysis 
 
-<!--Once the storage calss analysis is configured, you'll start seeing data analysis based on the filter in the Amazon S3 console in 24 to 48 hours. However, storage class analysis observes the access patterns of a filtered data set for 30 days or longer to gather information for analysis before giving a result. The analysis continues to run after the initial result and updates the result as the access patterns change. A message similar to the below will show up on the Amazon S3 console once storage class analysis is configured:-->
-
 You will start seeing the Storage Class Analysis results in 24 to 48 hours after the initial configuration. Here is sample message you will see in the Amazon S3 console:
 
 ![Object Properties](../images/SA-storage-class-analysis-observe-bar-start-observe.png)
@@ -62,19 +60,9 @@ Along with the above, details on retrieved data and % retrieved data is also sho
 
 ![Object Properties](../images/SA-storage-class-analysis-percentage-retrieved.png)
 
-You can choose to have storage class analysis export analysis reports to a comma-separated values (CSV) flat file. Exported reports are updated dailty and look similar to the below sample report:
+You can choose to have storage class analysis export analysis reports to a comma-separated values (CSV) flat file. Exported reports are updated daily and look similar to the below sample report:
 
 ![Object Properties](../images/SA-storage-class-analysis-export-file1.png)
-
-
-
-<!--7. On the same pane, choose Export data to export analysis reports to a comma-separated values (.csv) flat file. Specify the destination bucket as **s3reinvent2018demosourcebucketaccount1** and provide the prefix **storageanalysis/your-bucket-name>**. Here is an example showing the details for student-1 - 
-  
-![Object Properties](../images/SA-storage-class-analysis-export-1.png)   
-
-
-
-8. Choose *Save* -->
 
 ## End of part 1 in Lab 3.
 
