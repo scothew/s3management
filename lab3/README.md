@@ -1,7 +1,9 @@
 # Lab 3 - Amazon S3 Analytics and Metrics 
 
+This is a two part lab on Amazon S3 Analytics and Metrics.
+
 ## Introduction
-This lab demonstrates the use of Amazon S3 Analytics Storage Class Analysis feature for making decisions on data life cycle management policies.
+The first part of this lab demonstrates the use of Amazon S3 Analytics Storage Class Analysis feature for making decisions on data life cycle management policies.
 
 By using Amazon S3 analytics storage class analysis you can analyze storage access patterns to help you decide when to transition the right data to the right storage class. This feature determines when to transition less frequently accesses data from STANDARD storage to the STANDARD_IA (infrequent access).
 
@@ -78,7 +80,8 @@ You can choose to have storage class analysis export analysis reports to a comma
 # Amazon S3 - Metrics Configurations for Buckets
 
 ## Introduction
-This lab demonstrates the use of Amazon S3 Metrics Configurations for Buckets that enables users to recieve 1-minute Cloudwatch metrics, set Cloudwatch alarms and access near-real time Cloudwatch dashboards on operations and performance of Amazon S3.
+
+This is the second part of this lab, demonstrating the use of Amazon S3 Metrics Configurations for Buckets that enables users to recieve 1-minute Cloudwatch metrics, set Cloudwatch alarms and access near-real time Cloudwatch dashboards on operations and performance of Amazon S3.
 
 There are two ways that you can use CloudWatch with Amazon S3. 
 
