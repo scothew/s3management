@@ -82,24 +82,34 @@ Amazon S3 inventory provides comma-separated values (CSV) or Apache optimized ro
 You can query Amazon S3 inventory using standard SQL by using Amazon Athena, Amazon Redshift Spectrum, and other tools such as Presto, Apache Hive, and Apache Spark. It's easy to use Athena to run queries on your inventory files. You can use Athena for Amazon S3 inventory queries in all Regions where Athena is available.
 
 The following is an example CSV inventory list opened in a spreadsheet application. The heading row is shown only to help clarify the example; it is not included in the actual list.
-![Inventory CSV](../images/2-inventory-list.png)
+ ![Inventory CSV](../images/2-inventory-list.png)
 
-### 1. Step 1
+### Enabling Inventory
 When you configure an inventory list for a source bucket, you specify the destination bucket where you want the list to be stored, and whether you want to generate the list daily or weekly. You can also configure what object metadata to include and whether to list all object versions or only current versions.
 
-Since the inventory is only generated on a daily basis, in this lab, we will setup inventory, then view an inventory that has already been created.
+1. Go to the **S3 console**, **select your S3 bucket** (e.g. **stg209-student-#**)
+
+2. Go to the **Management** tab, click the **inventory** button then click **Add new** at the bottom
+ ![Object Properties](../images/1-inventory-add.png)
+
+3. Configure the inventory settings as desired and click **Save**
+ ![Object Properties](../images/1-inventory-add2.png)
+
+4. You will see a confirmation screen similar to this
+ ![Object Properties](../images/1-inventory-add3.png)
 
 ### View An Existing Bucket Inventory
-Since the inventory is only generated on a daily or weekly basis, we will view an existing inventory.
-Go to the **inventory** sub-folder/prefix in your Lab1 folder/prefix.
-![Inventory Objects](/images/1-inventory.png)
+Since the inventory is only generated on a daily or weekly basis, we will view an existing inventory in this lab.
+
+1. Go to the **inventory** sub-folder/prefix in your Lab1 folder/prefix.
+ ![Inventory Objects](/images/1-inventory.png)
 
 The CSV file is an example of what an inventory file will look like.  Feel free to download and view the file on your laptop.
 ![Inventory Objects](/images/1-inventory-excel.png)
 _Note: the CSV file would normally be gzip compressed, it is uncompressed here for your convenience_
 
 The manifest file is a manifest that describes what is in the inventory CSV file.
-![Inventory Objects](/images/1-inventory-manifest.png)
+ ![Inventory Objects](/images/1-inventory-manifest.png)
 
 The checksum file is the MD5 of the content of the manifest.json file
 
