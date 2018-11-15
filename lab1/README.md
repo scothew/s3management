@@ -89,18 +89,19 @@ When you configure an inventory list for a source bucket, you specify the destin
 
 Since the inventory is only generated on a daily basis, in this lab, we will setup inventory, then view an inventory that has already been created.
 
-### Step XYZ - View An Existing Bucket Inventory
+### View An Existing Bucket Inventory
 Since the inventory is only generated on a daily or weekly basis, we will view an existing inventory.
-Go to this [Sample Bucket] (https://s3.console.aws.amazon.com/s3/buckets/s3reinvent2018demosourcebucketaccount1/inventory/s3reinvent2018demosourcebucketaccount1/s3reinvent2018demosourcebucketaccount1inventory/data/?region=us-east-1&tab=overview) 
+Go to the **inventory** sub-folder/prefix in your Lab1 folder/prefix.
+![Inventory Objects](/images/1-inventory.png)
 
-If the URL doesn't work, navigate to s3reinvent2018demosourcebucketaccount1 and go into the Inventory / Data prefix (folder)
+The CSV file is an example of what an inventory file will look like.  Feel free to download and view the file on your laptop.
+![Inventory Objects](/images/1-inventory-excel.png)
+_Note: the CSV file would normally be gzip compressed, it is uncompressed here for your convenience_
 
-You will see a listing of GZip CSV inventory objects like this
-![Inventory CSV](/images/2-inventory-csv.png)
+The manifest file is a manifest that describes what is in the inventory CSV file.
+![Inventory Objects](/images/1-inventory-manifest.png)
 
-You can download, unzip and view one of the CSV files if you wish.
-It will look similar to this without the column headers
-![Inventory CSV](/images/2-inventory-list.png)
+The checksum file is the MD5 of the content of the manifest.json file
 
 ## Lab Complete
 Congratulations!  You have completed Lab 1
