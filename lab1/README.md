@@ -52,9 +52,9 @@ In addition to data classification, tagging offers other benefits such as:
 
 ## Object Tagging Lab 
 
-1. Go to the **S3 console**, **select your S3 bucket** (e.g. **stg209-student-#**), and **go to the Lab1 prefix** (folder)
+1. Go to the **[S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1#)**, **select your S3 bucket** (e.g. **stg209-student-#**), and **go to the Lab1 prefix** (folder)
 
-2. Click to row with the first object _**file001.bin**_ to open up the object properties view. (_Note: if you clicked on the actual file name, it will open up a tabbed view.  Go to the Properties tab, then Tags box_)
+2. Select the checkbox to the left of the first object _**file001.bin**_ to open up the object details view. (_Note: if you clicked on the actual object name it will open up a tabbed view.  Go to the Properties tab, then Tags box_)
 
 3. Click on the word **Tags** to open the tag editor
 
@@ -72,8 +72,56 @@ In addition to data classification, tagging offers other benefits such as:
 
 7. Your object has now been tagged.  Feel free to tag the first 3 objects. 
 
-## Viewing Object Tags
+## Example Uses for S3 Object Tags
+S3 object tagging allows you to categorize storage. You can configure various features including lifecycle management, cross region replication, and access control policies. Examples are shown below\.
 
+**Object Tagging and Lifecycle Management**
+
+In bucket lifecycle configuration, you can specify a filter to select a subset of objects to which the rule applies\. You can specify a filter based on the key name prefixes, _**object tags**_, or both\. 
+
+Suppose you store photos \(raw and the finished format\) in your Amazon S3 bucket\. You might tag these objects as shown following: 
+
+```
+phototype=raw
+or
+phototype=finished
+```
+
+You might consider archiving the raw photos to Amazon Glacier sometime after they are created\. You can configure a lifecycle rule with a filter that identifies the subset of objects with the key name prefix \(`photos/`\) that have a specific tag \(`phototype=raw`\)\. 
+
+Lifecycle Management will be covered in [Lab 2 - Storage Classes and Lifecycle Management](lab2/README.md)
+
+### Object Tagging and Cross\-Region Replication \(CRR\)
+
+If you configured cross\-region replication \(CRR\) on your bucket, Amazon S3 replicates tags, provided you grant S3 permission to read the tags\. In addition, you an configure replication rules based on the key name prefixes, _**object tags**_, or both\. For more information, see [Overview of Setting Up CRR ](crr-how-setup.md)\.
+
+Suppose you store photos \(raw and the finished format\) in your Amazon S3 bucket\. You might tag these objects as shown following: 
+
+```
+phototype=raw
+or
+phototype=finished
+```
+
+You might consider replicating the finished photos using CRR when they are created for extra redundancy\. You can configure a replication rule with a filter that identifies the subset of objects with the key name prefix \(`photos/`\) that have a specific tag \(`phototype=finished`\)\.
+
+Cross Region Replication will be covered in [Lab 4 - Versioning, Cross Region Replication, and Events](lab4/README.md)
+
+### Object Tagging and Access Control Policies<a name="tagging-and-policies"></a>
+
+You can also use permissions policies \(bucket and user policies\) to manage permissions related to object tagging\. 
+
+Object tags enable fine\-grained access control for managing permissions\. You can grant conditional permissions based on object tags\. Amazon S3 supports the following condition keys that you can use to grant conditional permissions based on object tags:
++ `s3:ExistingObjectTag/<tag-key>` – Use this condition key to verify that an existing object tag has the specific tag key and value\. 
+   
+**Note**  
+When granting permissions for the `PUT Object` and `DELETE Object` operations, this condition key is not supported\. That is, you cannot create a policy to grant or deny a user permissions to delete or overwrite an object based on its existing tags\. 
+   
++ `s3:RequestObjectTagKeys` – Use this condition key to restrict the tag keys that you want to allow on objects\. This is useful when adding tags to objects using the PutObjectTagging and PutObject, and POST object requests\.
+   
++ `s3:RequestObjectTag/<tag-key>` – Use this condition key to restrict the tag keys and values that you want to allow on objects\. This is useful when adding tags to objects using the PutObjectTagging and PutObject, and POST Bucket requests\.
+
+For a complete list of Amazon S3 service\-specific condition keys, see [Available Condition Keys](amazon-s3-policy-keys.md#AvailableKeys-iamV2)\. The following permissions policies illustrate how object tagging enables fine grained access permissions management\.
 
 
 ## S3 Inventory Overview
