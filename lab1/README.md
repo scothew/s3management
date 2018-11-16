@@ -91,7 +91,7 @@ You might consider archiving the raw photos to Amazon Glacier sometime after the
 
 Lifecycle Management will be covered in [Lab 2 - Storage Classes and Lifecycle Management](lab2/README.md)
 
-### Object Tagging and Cross\-Region Replication \(CRR\)
+**Object Tagging and Cross\-Region Replication \(CRR\)**
 
 If you configured cross\-region replication \(CRR\) on your bucket, Amazon S3 replicates tags, provided you grant S3 permission to read the tags\. In addition, you an configure replication rules based on the key name prefixes, _**object tags**_, or both\. For more information, see [Overview of Setting Up CRR ](crr-how-setup.md)\.
 
@@ -107,14 +107,14 @@ You might consider replicating the finished photos using CRR when they are creat
 
 Cross Region Replication will be covered in [Lab 4 - Versioning, Cross Region Replication, and Events](lab4/README.md)
 
-### Object Tagging and Access Control Policies<a name="tagging-and-policies"></a>
+**Object Tagging and Access Control Policies**
 
 You can also use permissions policies \(bucket and user policies\) to manage permissions related to object tagging\. 
 
 Object tags enable fine\-grained access control for managing permissions\. You can grant conditional permissions based on object tags\. Amazon S3 supports the following condition keys that you can use to grant conditional permissions based on object tags:
 + `s3:ExistingObjectTag/<tag-key>` – Use this condition key to verify that an existing object tag has the specific tag key and value\. 
    
-**Note**  
+_**Note**_  
 When granting permissions for the `PUT Object` and `DELETE Object` operations, this condition key is not supported\. That is, you cannot create a policy to grant or deny a user permissions to delete or overwrite an object based on its existing tags\. 
    
 + `s3:RequestObjectTagKeys` – Use this condition key to restrict the tag keys that you want to allow on objects\. This is useful when adding tags to objects using the PutObjectTagging and PutObject, and POST object requests\.
