@@ -8,7 +8,7 @@ Versioning is a data protection mechanism for S3 buckets/objects. Versioning is 
 
  ![Version View](../images/4-versioning-1.png)
 
-**Note the following:**
+**Benefits of CRR**
 
 * Protects against unintended deletes (think Recycle Bin)
 * No performance penalty
@@ -34,7 +34,7 @@ As you can see, there is only one version of each file. Feel free to open any tx
  ![Copy Version1](../images/4-versioning-4.png)
  
  
-5. Navigate back to folder **"lab4/version1"** and choose **Actions** **Paste** to write the contents to the folder.
+5. Navigate back to folder **"lab4/version1"** and choose **Actions** **Paste** to write the contents to the folder. Click **Paste**.
 
 
 6. Click on **Versions: Show**. You now have multiple versions of the same file.  Each version has a unique Version ID.
@@ -42,7 +42,7 @@ As you can see, there is only one version of each file. Feel free to open any tx
  ![Display Versions](../images/4-versioning-5.png)
  
  
-7. Open both versions of the same file. The "Latest" will read **"This is version 2"**. The "Older" will read **"This is version 1"**.  If you delete the "Latest" version of a file, it will promote the Older to "Latest".  
+7. Open both versions of the same file. The "Latest" will read **"This is version 2"**. The older file will read **"This is version 1"**.  If you delete the "Latest" version of a file, it will promote the older version to "Latest".  
 
 
 ## Cross Region Replication (CRR) Overview
