@@ -3,17 +3,17 @@
 This is a two part lab on Amazon S3 Analytics and Metrics.
 
 ## Introduction
-The first part of this lab demonstrates the use of Amazon S3 Analytics Storage Class Analysis feature for making decisions on data life cycle management policies.
+The first part of this lab demonstrates the use of Amazon S3 Analytics Storage Class Analysis feature for making decisions on data lifecycle management policies.
 
-By using Amazon S3 analytics storage class analysis you can analyze storage access patterns to help you decide when to transition the right data to the right storage class. This feature determines when to transition less frequently accesses data from STANDARD storage to the STANDARD_IA (infrequent access).
+By using Amazon S3 analytics storage class analysis you can analyze storage access patterns to help you decide when to transition the right data to the right storage class. This feature determines when to transition less frequently accessed data from STANDARD storage to the STANDARD_IA (infrequent access).
 
-You can use the storage class analysis results for improving the lifecycle policies. You can configure storage class analysis to analyze all the objects in a bucket or you can configure filters to group objects together for analysis by common prefix, by object tags or by both prefix and tags. 
+You can use the storage class analysis results for improving the lifecycle policies. You can configure storage class analysis to analyze all the objects in a bucket, or you can configure filters to group objects together for analysis by common prefix, by object tags or by both prefix and tags. 
 
 _Note: Storage class analysis does not give recommendations for transitions to the ONEZONE\_IA or GLACIER storage classes._
 
-You can have multiple storage class analysis filters per bucket, up to 1,000, and will receive a separate analysis for each filter. Multiple filter configurations allow you analyze specific groups of objects to improve your lifecycle policies that transition objects to STANDARD_IA.
+You can have multiple storage class analysis filters per bucket, up to 1,000, and will receive a separate analysis for each filter. Multiple filter configurations allow you to analyze specific groups of objects to improve your lifecycle policies that transition objects to STANDARD_IA.
 
-Storage class analysis results are updated daily and are available to view from the Amazon S3 console. These results can also be exported to a file in an S3 bucket and can be used in a spreadsheet application or can be used with the business intelligence tools such as Amazon QuickSight.
+Storage class analysis results are updated daily and are available to view from the Amazon S3 console. These results can also be exported to a file in an S3 bucket and can be used in a spreadsheet application or with business intelligence tools such as Amazon QuickSight.
 
 You can use Amazon S3 Storage Analytics storage class analysis to:
 * **Analyze the entire contents of a bucket**
@@ -46,7 +46,7 @@ Note: The destination bucket must be in the same AWS Region as the bucket for wh
 
 ## Results from Storage Class Analysis 
 
-You will start seeing the Storage Class Analysis results in 24 to 48 hours after the initial configuration. Here is sample message you will see in the Amazon S3 console:
+You will start seeing the Storage Class Analysis results in 24 to 48 hours after the initial configuration. Here is a sample message you will see in the Amazon S3 console:
 
 ![Object Properties](../images/SA-storage-class-analysis-observe-bar-start-observe.png)
 
@@ -54,7 +54,7 @@ Storage Class analysis usually gathers data for 30 days or more before providing
 
 ![Object Properties](../images/SA-storage-class-analysis-observe-bar.png)
 
-Along with the above, details on retrieved data and % retrieved data is also shown in graphs. Below are some samples:
+Along with the above, details on retrieved data and % retrieved data are also shown in graphs. Below are some samples:
 
 ![Object Properties](../images/SA-storage-class-analysis-how-much-retrieved.png)
 
@@ -74,20 +74,20 @@ This is the second part of this lab, demonstrating the use of Amazon S3 Metrics 
 
 There are two ways that you can use CloudWatch with Amazon S3. 
 
-* **Daily Storage Metrics for Buckets** - This features provides details on the storage utilization on the bucket level. More specifically, you will be able to get details on the average amount of data stored in a buckets in bytes and total number of objects stored in a bucket. The storage metrics are available for STANDARD storage class, STANDARD_IA storage class, ONEZONE_IA, Reduced Redundancy Storage (RRS) storage class and Glacier (GLACIER) storage class. This feature is ON by default and is reported daily with no additional charge.
+* **Daily Storage Metrics for Buckets** - This features provides details on the storage utilization on the bucket level. More specifically, you will be able to get details on the average amount of data stored in a bucket in bytes and total number of objects stored in a bucket. The storage metrics are available for STANDARD storage class, STANDARD_IA storage class, ONEZONE_IA, Reduced Redundancy Storage (RRS) storage class and Glacier (GLACIER) storage class. This feature is ON by default and is reported daily with no additional charge.
 
-* **Request metrics** - CloudWatch request metrics for Amazon S3, lets you quickly identify and act on operational issues by providing 1-minute Cloudwatch metrics at the Amazon S3 bucket-level, by default. Cloudwatch request metrics for the objects in a bucket will be available by creating **metric configurations** for a bucket. You can also define a filter for the metrics collected using a shared prefix or object tags, allowing you to align metrics filters to specific business applications, workflows, or internal organizations.
+* **Request metrics** - CloudWatch request metrics for Amazon S3 lets you quickly identify and act on operational issues by providing 1-minute Cloudwatch metrics at the Amazon S3 bucket-level, by default. Cloudwatch request metrics for the objects in a bucket will be available by creating **metric configurations** for a bucket. You can also define a filter for the metrics collected using a shared prefix or object tags, allowing you to align metrics filters to specific business applications, workflows, or internal organizations.
  
 For more information about the CloudWatch metrics that are available and the differences between storage and request metrics, see [Monitoring Metrics with Amazon CloudWatch](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html).
 
 ## Configuring Request Metrics for an S3 Bucket
 
 1. Go to the S3 console, select your S3 bucket
-2. Choose the Management tab, and then choose Metrics.
+2. Choose the Management tab, and then choose **Metrics**.
 
 ![Object Properties](../images/RM-choose-management-tab-metrics.png)
 
-3. Choose Requests
+3. Choose **Requests**
 
 ![Object Properties](../images/RM-choose-requests.png)
 
@@ -99,13 +99,13 @@ For more information about the CloudWatch metrics that are available and the dif
 
 ![Object Properties](../images/RM-choose-metrics-checkbox.png)
 
-6. Choose Save.
+6. Choose **Save**.
 
 You have now created a metrics configuration for all the objects in an Amazon S3 bucket. About 15 minutes after CloudWatch begins tracking these request metrics, you can see graphs for the metrics in both the Amazon S3 or CloudWatch consoles. You can also define a filter so the metrics are only collected and reported on a subset of objects in the bucket. For more information, see [How Do I Configure a Request Metrics Filter?](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/configure-metrics.html).
 
 ## Results from Configuration Request Metrics
 
-About 15 minutes after CloudWatch begins tracking these request metrics, you can see graphs for the metrics in both the Amazon S3 or CloudWatch consoles. Here is a list of sample graphs generated by request metrics:
+About 15 minutes after CloudWatch begins tracking these request metrics, you can see graphs for the metrics in both the Amazon S3 or CloudWatch consoles. Here are some sample graphs generated by request metrics:
 
 
 ![Object Properties](../images/RM-GetRequests.png)
