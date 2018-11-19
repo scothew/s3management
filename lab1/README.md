@@ -5,20 +5,20 @@ This lab will take you through the process of using object tagging, configuring 
 
 ## Getting Started
 
-### Log into AWS account and navigate to S3 Console
-Log into the AWS account using the URL and credentials provided to you by the presenter
+### Logging in
 
 Right click on the AWS Console link below and **open in new tab**
+
 [AWS Console](https://241417343503.signin.aws.amazon.com/console) 
 
-_Note: Each attendee has their own S3 bucket that they will be working with.  Your IAM user only has access to your own bucket._
+Log into the AWS account using the URL and credentials provided to you by the presenter
 
 Navigate to the S3 Console **Services -> Amazon S3**
 
 You should see a list of buckets like this:
 ![S3 Console](../images/1-console.png)
 
-Unless otherwise specified in the instructions, make sure you use the bucket assigned to you and without "CRR" in the bucket name.  (e.g. **stg209-student-1**)
+Each student will have two S3 buckets. Unless otherwise specified in the instructions, make sure you use the bucket assigned to you **and without "CRR" in the bucket name. (e.g. make sure to use the bucket with a name like this: stg209-student-1)**
 
 ## Tagging Overview
 Use object tagging to categorize storage. Each tag is a key-value pair that can be assigned during initial upload of an object or to an existing object.
@@ -52,7 +52,7 @@ In addition to data classification, tagging offers other benefits such as:
 
 ## Object Tagging Lab 
 
-1. Go to the **[S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1#)**, **select your S3 bucket** (e.g. **stg209-student-#**), and **go to the Lab1 prefix** (folder)
+1. Go to the **[S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1#)**, **click on the name of your S3 bucket** (e.g. **stg209-student-#**), and **go to the Lab1 prefix** (folder)
 
 2. Select the checkbox to the left of the first object _**file001.bin**_ to open up the object details view. (_Note: if you clicked on the actual object name it will open up a tabbed view.  Go to the Properties tab, then Tags box_)
 
@@ -79,7 +79,7 @@ S3 object tagging allows you to categorize storage. You can configure various fe
 
 In bucket lifecycle configuration, you can specify a filter to select a subset of objects to which the rule applies\. You can specify a filter based on the key name prefixes, _**object tags**_, or both\. 
 
-Suppose you store photos \(raw and the finished format\) in your Amazon S3 bucket\. You might tag these objects as shown following: 
+Suppose you store photos \(raw and the finished format\) in your Amazon S3 bucket\. You might tag these objects as shown below: 
 
 ```
 phototype=raw
@@ -93,9 +93,9 @@ Lifecycle Management will be covered in [Lab 2 - Storage Classes and Lifecycle M
 
 **Object Tagging and Cross\-Region Replication \(CRR\)**
 
-If you configured cross\-region replication \(CRR\) on your bucket, Amazon S3 replicates tags, provided you grant S3 permission to read the tags\. In addition, you an configure replication rules based on the key name prefixes, _**object tags**_, or both\. For more information, see [Overview of Setting Up CRR ](crr-how-setup.md)\.
+If you configured cross\-region replication \(CRR\) on your bucket, Amazon S3 replicates tags, provided you grant S3 permission to read the tags\. In addition, you can configure replication rules based on the key name prefixes, _**object tags**_, or both\. For more information, see [Overview of Setting Up CRR ](crr-how-setup.md)\.
 
-Suppose you store photos \(raw and the finished format\) in your Amazon S3 bucket\. You might tag these objects as shown following: 
+Again, you might use the following photo tags: 
 
 ```
 phototype=raw
@@ -115,13 +115,15 @@ Object tags enable fine\-grained access control for managing permissions\. You c
 + `s3:ExistingObjectTag/<tag-key>` – Use this condition key to verify that an existing object tag has the specific tag key and value\. 
    
 _**Note**_  
-When granting permissions for the `PUT Object` and `DELETE Object` operations, this condition key is not supported\. That is, you cannot create a policy to grant or deny a user permissions to delete or overwrite an object based on its existing tags\. 
+When granting permissions for the `PUT Object` and `DELETE Object` operations, this condition key is not supported\. That is, you cannot create a policy to grant or deny a user's permissions to delete or overwrite an object based on its existing tags\. 
    
 + `s3:RequestObjectTagKeys` – Use this condition key to restrict the tag keys that you want to allow on objects\. This is useful when adding tags to objects using the PutObjectTagging and PutObject, and POST object requests\.
    
 + `s3:RequestObjectTag/<tag-key>` – Use this condition key to restrict the tag keys and values that you want to allow on objects\. This is useful when adding tags to objects using the PutObjectTagging and PutObject, and POST Bucket requests\.
 
-For a complete list of Amazon S3 service\-specific condition keys, see [Available Condition Keys](amazon-s3-policy-keys.md#AvailableKeys-iamV2)\. The following permissions policies illustrate how object tagging enables fine grained access permissions management\.
+For a complete list of Amazon S3 service\-specific condition keys, see [Available Condition Keys](amazon-s3-policy-keys.md#AvailableKeys-iamV2)\. 
+
+<!--The following permissions policies illustrate how object tagging enables fine grained access permissions management\. -->
 
 
 ## S3 Inventory Overview
@@ -132,8 +134,8 @@ You can query Amazon S3 inventory using standard SQL by using Amazon Athena, Ama
 The following is an example CSV inventory list opened in a spreadsheet application. The heading row is shown only to help clarify the example; it is not included in the actual list.
  ![Inventory CSV](../images/2-inventory-list.png)
 
-### Enabling Inventory
-When you configure an inventory list for a source bucket, you specify the destination bucket where you want the list to be stored, and whether you want to generate the list daily or weekly. You can also configure what object metadata to include and whether to list all object versions or only current versions.
+### Enabling Inventory Lab
+When you configure an inventory list for a source bucket, you specify the destination bucket where you want the list to be stored and whether you want to generate the list daily or weekly. You can also configure what object metadata to include and whether to list all object versions or only current versions.
 
 1. Go to the **S3 console**, **select your S3 bucket** (e.g. **stg209-student-#**)
 
