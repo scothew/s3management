@@ -18,9 +18,9 @@ GLACIER | 99.999999999% | 99.99% (after you restore objects) | Objects must be r
 
  _Note: You cannot specify GLACIER as the storage class at the time that you create an object. You transition objects to the GLACIER storage class using lifecycle management._ 
 
- _Note: There is another storage class known as RRS (Reduced Redundancy Storage) but AWS recommends choosing one of the other storage classes_
+ _Note: There is another storage class known as RRS (Reduced Redundancy Storage) but AWS recommends choosing one of the other storage classes._
 
-Pricing for each storage class can be found on the [S3 Pricing Page](https://aws.amazon.com/s3/pricing/)
+Pricing for each storage class can be found on the [S3 Pricing Page].(https://aws.amazon.com/s3/pricing/)
 
 ## Setting the Storage Class on an Object
 Amazon S3 APIs support setting (or updating) the storage class of objects with the following methods:
@@ -35,7 +35,8 @@ Amazon S3 APIs support setting (or updating) the storage class of objects with t
 3. Select the checkbox to the left of the first object _**file001.bin**_ to open up the object details view
 ![Storage Classes](../images/3-objectdetails.png)
 
-Click on **Storage Class** to bring up the **Change Storage Class** window
+Click on **Storage Class** to bring up the **Change Storage Class** window.
+
 Click on the radio button for **Standard-IA** and click **save** then **change**
 ![Storage Classes](../images/3-changestorageclass.png)
 The updated storage class will now be visible on the object overview page in the **storage class** column.
@@ -47,7 +48,7 @@ While it's possible to set the storage class via the S3 console, this would be c
 If you were using the AWS CLI, the storage class can easily be set with the `storage-class` parameter like this: (you do not need to do this in your lab)
     `aws s3 cp file004.bin s3://stg209-student-1/lab2/ --storage-class STANDARD_IA`
 
-One of the most common ways to move objects between storage classes is via the built-in lifecycle policies which is covered next.
+One of the most common ways to move objects between storage classes is via the built-in lifecycle policies, which is covered next.
 
 ## Object Lifecycle Management via a Lifecycle Policy
 You can use lifecycle policies to define actions you want Amazon S3 to take during an object's lifetime. For example, you could transition objects to another storage class, archive them, or delete them after a specified period of time.
@@ -61,11 +62,11 @@ A versioning-enabled bucket can have many versions of the same object, one curre
 1. Go to the [S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1) and select your S3 bucket (e.g **stg209-student-N**)
 2. Navigate to the **Management** tab and select **Add lifecycle rule**
 ![S3 Management](../images/3b-management.png)
-3. **Give the rule a name** and add the **prefix lab2**, click **next**
+3. **Give the rule a name** and add the prefix **lab2**, click **next**
 ![S3 Management](../images/3b-lifecycle-1.png)
 4. Click the checkmarks for both **Current version** and **Previous version**
-5. Click the **+ Add Transition** link to to add a transition "**for current versions of objects**"
-6. Select **Transition to Standard-IA after** It will automatically select "30" for **Days after creation**
+5. Next to "**for current versions of objects**" click the **+ Add Transition** link to to add a transition 
+6. Select **Transition to Standard-IA after**. It will automatically select "30" for **Days after creation**
 7. Add additional transitions as shown in the graphic
 ![S3 Management](../images/3b-lifecycle-2.png)
 8. Click **Next**
@@ -79,7 +80,7 @@ A versioning-enabled bucket can have many versions of the same object, one curre
 
 
 ## Lab Complete
-Congratulations!  You have completed Lab 2
+Congratulations!  You have completed Lab 2.
 
 ## Navigation
 [Lab 3](../lab3/README.md) | 
