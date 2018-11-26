@@ -12,7 +12,7 @@ Amazon S3 offers the following storage classes:
 Storage Class | Durability (designed for) | Availability (designed for) | Other Considerations
 ------------ | ------------- | ------------ | -------------
 STANDARD | 99.999999999% | 99.99% | Frequently accessed data
-S3 Intelligent-Tiering | 99.999999999% | 99.99% | Long-lived data with changing or unknown access patterns
+INTELLIGENT_TIERING (NEW)| 99.999999999% | 99.99% | Long-lived data with changing or unknown access patterns
 STANDARD_IA | 99.999999999% | 99.9% | Long-lived, infrequently accessed data
 ONEZONE_IA | 99.999999999% | 99.5% | Stored in one AZ. Suitable for infrequently accessed data
 GLACIER | 99.999999999% | 99.99% (after you restore objects) | Objects must be restored before you can access them
