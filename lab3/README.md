@@ -64,7 +64,7 @@ Storage Class Analysis usually gathers data for 30 days or more before providing
 
 ## Introduction
 
-This is the second part of this lab, demonstrating the use of Amazon S3 Metrics Configurations for Buckets that enables users to recieve 1-minute Cloudwatch metrics, set Cloudwatch alarms and access near-real time Cloudwatch dashboards on operations and performance of Amazon S3.
+This is the second part of this lab, demonstrating the use of Amazon S3 Metrics Configurations for Buckets that enables users to have 1-minute Cloudwatch metrics, set Cloudwatch alarms and access near-real time Cloudwatch dashboards on operations and performance of Amazon S3.
 
 There are two ways that you can use CloudWatch with Amazon S3. 
 
@@ -76,7 +76,7 @@ For more information about the CloudWatch metrics that are available and the dif
 
 ## Configuring Request Metrics for an S3 Bucket
 
-1. Go to the S3 console, select your S3 bucket
+1. Go to the S3 console, select your S3 bucket (e.g **stg209-student-N**)
 2. Choose the Management tab, and then choose **Metrics**.
 
 ![Object Properties](../images/RM-choose-management-tab-metrics.png)
