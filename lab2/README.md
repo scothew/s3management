@@ -20,7 +20,7 @@ GLACIER | 99.999999999% | 99.99% (after you restore objects) | Objects must be r
 
  _Note: There is another storage class known as RRS (Reduced Redundancy Storage) but AWS recommends choosing one of the other storage classes._
 
-Pricing for each storage class can be found on the [S3 Pricing Page].(https://aws.amazon.com/s3/pricing/)
+Pricing for each storage class can be found on the [S3 Pricing Page](https://aws.amazon.com/s3/pricing/).
 
 ## Setting the Storage Class on an Object
 Amazon S3 APIs support setting (or updating) the storage class of objects with the following methods:
