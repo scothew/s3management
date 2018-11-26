@@ -34,7 +34,7 @@ As you can see, there is only one version of each file. Feel free to open any tx
  ![Copy Version1](../images/4-versioning-4.png)
  
  
-5. Navigate back to folder **"lab4/version1"** and choose **Actions** **Paste** to write the contents to the folder. Click **Paste**.
+5. Navigate back to folder **"lab4/version1"** and choose **Actions**, then **Paste** to write the contents to the folder. Click **Paste**.
 
 
 6. Click on **Versions: Show**. You now have multiple versions of the same file.  Each version has a unique Version ID.
@@ -46,7 +46,7 @@ As you can see, there is only one version of each file. Feel free to open any tx
 
 
 ## Cross Region Replication (CRR) Overview
-CRR is a bucket level feature that allows for asynchronous replication of objects in different regions.  Source and destination can be same or different accounts. Only new Objects or Puts will be replicated. Deletes and Lifecycle Policies will not be replicated.  All data in transit is encrypted (SSL,TLS).
+CRR is a bucket level feature that allows for asynchronous replication of objects in different regions.  Source and destination can be same or different accounts. Only new Objects or Puts will be replicated. Deletes and Lifecycle Policies will not be replicated.  All data in transit is encrypted (SSL/TLS).
 
 * **Use cases:** Compliance, Latency, Operational, Security.
 * **Requirements:** Versioning (source/dest), Different Regions (source/dest), Permissions (replication)
@@ -83,6 +83,8 @@ CRR is a bucket level feature that allows for asynchronous replication of object
 
 
 8. Remember...CRR only replicates "new" PUTs and Objects. Test the replication by copying and pasting files into the source bucket.  The objects will automatically be copied to your destination bucket.
+
+9. If you do not see the files in the destination folder, wait a few seconds, then use your browsers reload button and check again.
 
 ## Lab Complete
 
