@@ -9,13 +9,13 @@ Every object in Amazon S3 has a storage class associated with it. By default, ob
 
 Amazon S3 offers the following storage classes:
 
-Storage Class | Durability (designed for) | Availability (designed for) | Other Considerations
+Storage Class | Durability (designed for) | Min storage duration | Other Considerations
 ------------ | ------------- | ------------ | -------------
-STANDARD | 99.999999999% | 99.99% | Frequently accessed data
-INTELLIGENT_TIERING (NEW)| 99.999999999% | 99.99% | Long-lived data with changing or unknown access patterns
-STANDARD_IA | 99.999999999% | 99.9% | Long-lived, infrequently accessed data
-ONEZONE_IA | 99.999999999% | 99.5% | Stored in one AZ. Suitable for infrequently accessed data
-GLACIER | 99.999999999% | 99.99% (after you restore objects) | Objects must be restored before you can access them
+STANDARD | 99.999999999% | None | Frequently accessed data
+INTELLIGENT_TIERING (NEW)| 99.999999999% | 30 days | Long-lived data with changing or unknown access patterns. < 128KB will not transition to IA
+STANDARD_IA | 99.999999999% | 30 days | Long-lived, infrequently accessed data.  128KB Min.
+ONEZONE_IA | 99.999999999% | 30 days | Stored in one AZ. Suitable for infrequently accessed data
+GLACIER | 99.999999999% | 90 days | Objects must be restored before you can access them
 
 
  _Note: You cannot specify GLACIER as the storage class at the time that you create an object. You transition objects to the GLACIER storage class using lifecycle management._ 
