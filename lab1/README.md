@@ -142,16 +142,19 @@ When you configure an inventory list for a source bucket, you specify the destin
 2. Go to the **Management** tab, click the **inventory** button then click **Add new** at the bottom
  ![Object Properties](../images/1-inventory-add.png)
 
-3. Configure the inventory settings as desired and click **Save**
+3. Configure the inventory settings as desired (be sure to choose your own bucket for the destination bucket **stg209-student-#**).
  ![Object Properties](../images/1-inventory-add2.png)
 
-4. You will see a confirmation screen similar to this
+4. Click **Save**. 
+
+5. You will see a confirmation screen similar to this
  ![Object Properties](../images/1-inventory-add3.png)
 
 ### View An Existing Bucket Inventory
 Since the inventory is only generated on a daily or weekly basis, we will view an existing inventory in this lab.
 
-1. Go to the **inventory** sub-folder/prefix in your Lab1 folder/prefix.
+1. Go to the **inventory** sub-folder in your Lab1 folder (`stg209-student-#/lab1/inventory`). You will see three example files.
+
  ![Inventory Objects](/images/1-inventory.png)
 
 The CSV file is an example of what an inventory file will look like.  Feel free to download and view the file on your laptop.
