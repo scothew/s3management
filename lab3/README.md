@@ -54,7 +54,7 @@ A sample bucket has been configured with Storage Class Analysis enabled on some 
 
 1. Go to the S3 console, select the S3 bucket with the name **stg209-analyticsandmetrics-demo**
 
-2. Choose the Management tab, and then choose **Analytics**. 
+2. Choose the Management tab, and then choose **Analytics**. Review the graphs and try the filters.  
 
  ![Analytics](../images/3-analytics-1.png)
 
@@ -68,12 +68,12 @@ Along with the above, details on retrieved data and % retrieved data are also sh
 
 ![Object Properties](../images/SA-storage-class-analysis-percentage-retrieved.png)-->
 
-Storage Class Analysis usually gathers data for 30 days or more before providing recommendations on the storage class.  Here is a sample of what that would look like:
+Storage Class Analysis usually gathers data for 30 days or more before providing recommendations on the storage class.  Here is a sample of an environment with a lot of data that is infrequently accessed and is a candidate for moving to a lower cost tier.
  ![Analytics](../images/3-analytics-2.png)
 
-You can choose to have storage class analysis export analysis reports to a comma-separated values (CSV) flat file. Exported reports are updated daily and look similar to the below sample report:
+<!--You can choose to have storage class analysis export analysis reports to a comma-separated values (CSV) flat file. Exported reports are updated daily and look similar to the below sample report:
 
-![Object Properties](../images/SA-storage-class-analysis-export-file1.png)
+![Object Properties](../images/SA-storage-class-analysis-export-file1.png)-->
 
 ## End of part 1 in Lab 3.
 
