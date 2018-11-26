@@ -31,7 +31,7 @@ Amazon S3 APIs support setting (or updating) the storage class of objects with t
 
 ### Changing the Storage Class on an Existing Object via the Console
 1. Go to the [S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1), select your S3 bucket (e.g **stg209-student-N**), and go to the Lab2 prefix (folder)
-2. Note that the first three objects have **standard** for their object class.
+2. Note that the objects are using three different storage classes. The first three objects have **standard** for their object class.
 3. Select the checkbox to the left of the first object _**file001.bin**_ to open up the object details view
 ![Storage Classes](../images/3-objectdetails.png)
 
@@ -65,7 +65,7 @@ A versioning-enabled bucket can have many versions of the same object, one curre
 3. **Give the rule a name** and add the prefix **lab2**, click **next**
 ![S3 Management](../images/3b-lifecycle-1.png)
 4. Click the checkmarks for both **Current version** and **Previous version**
-5. Next to "**for current versions of objects**" click the **+ Add Transition** link to to add a transition 
+5. Next to "**for current versions of objects**" click the "**+ Add Transition**" link to to add a transition 
 6. Select **Transition to Standard-IA after**. It will automatically select "30" for **Days after creation**
 7. Add additional transitions as shown in the graphic
 ![S3 Management](../images/3b-lifecycle-2.png)
