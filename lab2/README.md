@@ -62,23 +62,40 @@ A lifecycle configuration is a set of rules defining actions that Amazon S3 appl
 A versioning-enabled bucket can have many versions of the same object, one current version and zero or more non-current (previous) versions. Using a lifecycle policy, you can define actions specific to current and non-current object versions.
 
 1. Go to the [S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1) and select your S3 bucket (e.g **stg209-student-N**)
+
 2. Navigate to the **Management** tab and select **Add lifecycle rule**
-![S3 Management](../images/3b-management.png)
+ 
+ ![S3 Management](../images/3b-management.png)
+
 3. **Give the rule a name** and add the prefix **lab2**, click **next**
-![S3 Management](../images/3b-lifecycle-1.png)
+ 
+ ![S3 Management](../images/3b-lifecycle-1.png)
+
 4. Click the checkmarks for both **Current version** and **Previous version**
+
 5. Next to "**for current versions of objects**" click the "**+ Add Transition**" link to to add a transition 
+
 6. Select **Transition to Standard-IA after**. It will automatically select "30" for **Days after creation**
+
 7. Add additional transitions as shown in the graphic (you may need to scroll your browser to see dropdowns for previous versions)
-![S3 Management](../images/3b-lifecycle-2.png)
+ 
+ ![S3 Management](../images/3b-lifecycle-2.png)
+
 8. Click **Next**
+
 9. Select **Previous Versions**
-![S3 Management](../images/3b-lifecycle-3.png)
+ 
+ ![S3 Management](../images/3b-lifecycle-3.png)
+
 10. Click **Next**
+
 11. Review Settings and click **Save**
-![S3 Management](../images/3b-lifecycle-4.png)
+ 
+ ![S3 Management](../images/3b-lifecycle-4.png)
+
 12. You should now see a summary of your lifecycle policy
-![S3 Management](../images/3b-lifecycle-5.png)
+ 
+ ![S3 Management](../images/3b-lifecycle-5.png)
 
 
 ## Lab Complete
