@@ -42,15 +42,11 @@ You can use the Amazon S3 console, the REST API, or the AWS CLI or AWS SDKs to c
 6. Click **Save**
 7. The Storage Class Analysis will take some time to run.  Since this is a sample bucket without any live traffic, we will view a sample of existing storage class analysis.
 
-Note: The destination bucket must be in the same AWS Region as the bucket for which you are setting up the analysis. The destination bucket can be in a different AWS account.
+<!--Note: The destination bucket must be in the same AWS Region as the bucket for which you are setting up the analysis. The destination bucket can be in a different AWS account.-->
 
 ## Results from Storage Class Analysis 
 
-You will start seeing the Storage Class Analysis results in 24 to 48 hours after the initial configuration. <!--Here is a sample message you will see in the Amazon S3 console:
-
-![Object Properties](../images/SA-storage-class-analysis-observe-bar-start-observe.png)-->
-
-A sample bucket has been configured with Storage Class Analysis enabled on some sample data.  
+You will start seeing the Storage Class Analysis results in 24 to 48 hours after the initial configuration. A sample bucket has been configured with Storage Class Analysis enabled on some sample data for you to view in this lab.
 
 1. Go to the S3 console, select the S3 bucket with the name **stg209-analyticsandmetrics-demo**
 

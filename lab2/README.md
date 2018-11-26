@@ -67,7 +67,7 @@ A versioning-enabled bucket can have many versions of the same object, one curre
 4. Click the checkmarks for both **Current version** and **Previous version**
 5. Next to "**for current versions of objects**" click the "**+ Add Transition**" link to to add a transition 
 6. Select **Transition to Standard-IA after**. It will automatically select "30" for **Days after creation**
-7. Add additional transitions as shown in the graphic
+7. Add additional transitions as shown in the graphic (you may need to scroll your browser to see dropdowns for previous versions)
 ![S3 Management](../images/3b-lifecycle-2.png)
 8. Click **Next**
 9. Select **Previous Versions**
