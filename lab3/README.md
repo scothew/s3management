@@ -40,7 +40,7 @@ You can use the Amazon S3 console, the REST API, or the AWS CLI or AWS SDKs to c
 ![Object Properties](../images/SA-storage-class-analysis-tag.png)
 
 6. Click **Save**
-7. The Storage Class Analysis will take some time to run.  Since this is a sample bucket without any live traffic, we will view a sample of existing storage class analysis.
+7. The Storage Class Analysis will take some time to run.  Since this is a sample bucket without any live traffic, we will view a sample of existing storage class analysis in the next section.
 
 <!--Note: The destination bucket must be in the same AWS Region as the bucket for which you are setting up the analysis. The destination bucket can be in a different AWS account.-->
 
@@ -54,22 +54,9 @@ You will start seeing the Storage Class Analysis results in 24 to 48 hours after
 
  ![Analytics](../images/3-analytics-1.png)
 
-<!--Storage Class analysis usually gathers data for 30 days or more before providing recommendations on the storage class. After storage class analysis gathers sufficient information, you'll see a message in the Amazon S3 console similar to the following:
-
-![Object Properties](../images/SA-storage-class-analysis-observe-bar.png)
-
-Along with the above, details on retrieved data and % retrieved data are also shown in graphs. Below are some samples:
-
-![Object Properties](../images/SA-storage-class-analysis-how-much-retrieved.png)
-
-![Object Properties](../images/SA-storage-class-analysis-percentage-retrieved.png)-->
-
 Storage Class Analysis usually gathers data for 30 days or more before providing recommendations on the storage class.  Here is a sample of an environment with a lot of data that is infrequently accessed and is a candidate for moving to a lower cost tier.
+
  ![Analytics](../images/3-analytics-2.png)
-
-<!--You can choose to have storage class analysis export analysis reports to a comma-separated values (CSV) flat file. Exported reports are updated daily and look similar to the below sample report:
-
-![Object Properties](../images/SA-storage-class-analysis-export-file1.png)-->
 
 ## End of part 1 in Lab 3.
 
