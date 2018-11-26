@@ -46,11 +46,19 @@ Note: The destination bucket must be in the same AWS Region as the bucket for wh
 
 ## Results from Storage Class Analysis 
 
-You will start seeing the Storage Class Analysis results in 24 to 48 hours after the initial configuration. Here is a sample message you will see in the Amazon S3 console:
+You will start seeing the Storage Class Analysis results in 24 to 48 hours after the initial configuration. <!--Here is a sample message you will see in the Amazon S3 console:
 
-![Object Properties](../images/SA-storage-class-analysis-observe-bar-start-observe.png)
+![Object Properties](../images/SA-storage-class-analysis-observe-bar-start-observe.png)-->
 
-Storage Class analysis usually gathers data for 30 days or more before providing recommendations on the storage class. After storage class analysis gathers sufficient information, you'll see a message in the Amazon S3 console similar to the following:
+A sample bucket has been configured with Storage Class Analysis enabled on some sample data.  
+
+1. Go to the S3 console, select the S3 bucket with the name **stg209-analyticsandmetrics-demo**
+
+2. Choose the Management tab, and then choose **Analytics**. 
+
+ ![Analytics](../images/3-analytics-1.png)
+
+<!--Storage Class analysis usually gathers data for 30 days or more before providing recommendations on the storage class. After storage class analysis gathers sufficient information, you'll see a message in the Amazon S3 console similar to the following:
 
 ![Object Properties](../images/SA-storage-class-analysis-observe-bar.png)
 
@@ -58,7 +66,10 @@ Along with the above, details on retrieved data and % retrieved data are also sh
 
 ![Object Properties](../images/SA-storage-class-analysis-how-much-retrieved.png)
 
-![Object Properties](../images/SA-storage-class-analysis-percentage-retrieved.png)
+![Object Properties](../images/SA-storage-class-analysis-percentage-retrieved.png)-->
+
+Storage Class Analysis usually gathers data for 30 days or more before providing recommendations on the storage class.  Here is a sample of what that would look like:
+ ![Analytics](../images/3-analytics-2.png)
 
 You can choose to have storage class analysis export analysis reports to a comma-separated values (CSV) flat file. Exported reports are updated daily and look similar to the below sample report:
 
@@ -108,7 +119,6 @@ You have now created a metrics configuration for all the objects in an Amazon S3
 About 15 minutes after CloudWatch begins tracking these request metrics, you can see graphs for the metrics in both the Amazon S3 or CloudWatch consoles. 
 
 A sample bucket has been configured with S3 Storage Metrics already enabled and with some sample data already loaded.  
-
 
 1. Go to the S3 console, select the S3 bucket with the name **stg209-analyticsandmetrics-demo**
 
