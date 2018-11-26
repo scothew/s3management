@@ -40,7 +40,7 @@ Amazon S3 APIs support setting (or updating) the storage class of objects with t
 Click on **Storage Class** to bring up the **Change Storage Class** window.
 
 Click on the radio button for **Standard-IA** and click **save** then **change**
-![Storage Classes](../images/3-changestorageclass.png)
+![Storage Classes](../images/2-changestorageclass.png)
 The updated storage class will now be visible on the object overview page in the **storage class** column.
 
 ### Setting the Storage Class on an Object via AWS CLI CP Command
