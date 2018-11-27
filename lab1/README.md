@@ -9,7 +9,7 @@ This lab will take you through the process of using object tagging, configuring 
 
 1. Right-click on the AWS Console link below and select **open in new tab**
 
-  [AWS Console](https://241417343503.signin.aws.amazon.com/console) 
+    [AWS Console](https://241417343503.signin.aws.amazon.com/console) 
 
 2. Log into the AWS account using the credentials provided by the presenter
 
@@ -52,7 +52,7 @@ In addition to data classification, tagging offers other benefits such as:
 
 -->
 
-## Object Tagging Lab 
+## S3 Object Tagging Lab 
 
 1. Go to the **[S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1#)**, **click on the name of your S3 bucket** (e.g. **stg209-student-#**), and **go to the Lab1 prefix** (folder)
 
@@ -139,7 +139,7 @@ You can query Amazon S3 inventory using standard SQL by using Amazon Athena, Ama
 The following is an example CSV inventory list opened in a spreadsheet application. The heading row is shown only to help clarify the example; it is not included in the actual list.
  ![Inventory CSV](../images/2-inventory-list.png)
 
-### Enabling Inventory Lab
+## Enabling Inventory Lab
 When you configure an inventory list for a source bucket, you specify the destination bucket where you want the list to be stored and whether you want to generate the list daily or weekly. You can also configure what object metadata to include and whether to list all object versions or only current versions.
 
 1. Go to the **S3 console**, **select your S3 bucket** (e.g. **stg209-student-#**)
@@ -158,7 +158,7 @@ When you configure an inventory list for a source bucket, you specify the destin
 -->
 
 
-## Viewing an Existing S3 Bucket Inventory
+## Viewing an Existing S3 Inventory
 Since the S3 inventory is only generated on a daily or weekly basis, we will view an existing inventory in this lab.
 
 1. Go to the **inventory** sub-folder in your Lab1 folder (`stg209-student-#/lab1/inventory`). You will see three example files.
@@ -168,7 +168,7 @@ Since the S3 inventory is only generated on a daily or weekly basis, we will vie
 2. The CSV file is an example of what an inventory file will look like.  Feel free to download and view the file on your laptop.
 ![Inventory Objects](/images/1-inventory-excel.png)
 
-  _Note: the CSV file would normally be gzip compressed, it is uncompressed here for your convenience_
+    _Note: the CSV file would normally be gzip compressed, it is uncompressed here for your convenience_
 
 3. The manifest file is a manifest that describes what is in the inventory CSV file.
  ![Inventory Objects](/images/1-inventory-manifest.png)
