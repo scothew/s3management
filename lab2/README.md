@@ -78,7 +78,7 @@ A versioning-enabled bucket can have many versions of the same object, one curre
  
  ![S3 Management](../images/3b-management.png)
 
-3. **Give the rule a name** and add the prefix **lab2**, click **next**
+3. **Give the rule a name** and click **next**
  
  ![S3 Management](../images/3b-lifecycle-1.png)
 
