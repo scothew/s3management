@@ -3,6 +3,7 @@
 ## Introduction
 This lab will take you through the process of viewing and setting storage classes on an object and setting up lifecycle policies.
 
+<!--
 ## Storage Classes
 Every object in Amazon S3 has a storage class associated with it. By default, objects are in the STANDARD class.  When using the S3 Management Console, when you list objects in the bucket, the console shows the storage class.
 ![Storage Classes](../images/3-ObjectStorageClass.png)
@@ -31,18 +32,23 @@ Amazon S3 APIs support setting (or updating) the storage class of objects with t
 * **Change the storage class of an existing object** by making a copy of the object using the PUT Object - Copy API.
 * **Object Lifecycle Management**
 
-### Changing the Storage Class on an Existing Object via the Console
+-->
+
+## S3 Storage Class Lab
 1. Go to the [S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1), select your S3 bucket (e.g **stg209-student-N**), and go to the Lab2 prefix (folder)
+
 2. Note that the objects are using three different storage classes. The first three objects have **standard** for their object class.
+
 3. Select the checkbox to the left of the first object _**file001.bin**_ to open up the object details view
 ![Storage Classes](../images/3-objectdetails.png)
 
-Click on **Storage Class** to bring up the **Change Storage Class** window.
+4. Click on **Storage Class** to bring up the **Change Storage Class** window.
 
-Click on the radio button for **Standard-IA** and click **save** then **change**
+5. Click on the radio button for **Standard-IA** and click **save** then **change**
 ![Storage Classes](../images/2-changestorageclass.png)
 The updated storage class will now be visible on the object overview page in the **storage class** column.
 
+<!--
 ### Setting the Storage Class on an Object via AWS CLI CP Command
 
 While it's possible to set the storage class via the S3 console, this would be cumbersome to accomplish on many files.
@@ -60,6 +66,10 @@ A lifecycle configuration is a set of rules defining actions that Amazon S3 appl
  * **Expiration actions** Define when objects should expire and be automatically deleted.
 
 A versioning-enabled bucket can have many versions of the same object, one current version and zero or more non-current (previous) versions. Using a lifecycle policy, you can define actions specific to current and non-current object versions.
+
+-->
+
+## S3 Lifecycle Policy Lab
 
 1. Go to the [S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1) and select your S3 bucket (e.g **stg209-student-N**)
 
