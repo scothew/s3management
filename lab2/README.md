@@ -70,7 +70,7 @@ A versioning-enabled bucket can have many versions of the same object, one curre
 
 -->
 
-## S3 Lifecycle Policy Lab
+## S3 Lifecycle Rule Lab
 
 1. Go to the [S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1) and select your S3 bucket (e.g **stg209-student-N**)
 
