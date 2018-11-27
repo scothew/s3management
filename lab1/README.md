@@ -5,21 +5,22 @@ This lab will take you through the process of using object tagging, configuring 
 
 ## Getting Started
 
-### Logging in
+### Logging in to the AWS console
 
-Right click on the AWS Console link below and **open in new tab**
+1. Right-click on the AWS Console link below and select **open in new tab**
 
-[AWS Console](https://241417343503.signin.aws.amazon.com/console) 
+  [AWS Console](https://241417343503.signin.aws.amazon.com/console) 
 
-Log into the AWS account using the URL and credentials provided to you by the presenter
+2. Log into the AWS account using the credentials provided by the presenter
 
-Navigate to the S3 Console **Services -> Amazon S3**
+3. Navigate to the S3 Console by selecting **Services -> Amazon S3** at the upper left
 
-You should see a list of buckets like this:
+4. You should see a list of buckets like this:
 ![S3 Console](../images/1-console.png)
 
-Each student will have two S3 buckets. Unless otherwise specified in the instructions, make sure you use the bucket assigned to you **and without "CRR" in the bucket name. (e.g. make sure to use the bucket with a name like this: stg209-student-1)**
+5. Each student has two S3 buckets. Unless otherwise specified in the instructions, make sure you use the bucket assigned to you **and without "CRR" in the bucket name. (e.g. make sure to use the bucket with a name like this: stg209-student-1)**
 
+<!--
 ## Tagging Overview
 Use object tagging to categorize storage. Each tag is a key-value pair that can be assigned during initial upload of an object or to an existing object.
 
@@ -49,6 +50,7 @@ In addition to data classification, tagging offers other benefits such as:
 
  * When using Amazon S3 analytics, you can configure filters to group objects together for analysis by object tags, by key name prefix, or by both prefix and tags.
 
+-->
 
 ## Object Tagging Lab 
 
@@ -72,6 +74,7 @@ In addition to data classification, tagging offers other benefits such as:
 
 7. Your object has now been tagged.  Feel free to tag the first 3 objects. 
 
+<!--
 ## Example Uses for S3 Object Tags
 S3 object tagging allows you to categorize storage. You can configure various features including lifecycle management, cross region replication, and access control policies. Examples are shown below\.
 
@@ -122,9 +125,11 @@ When granting permissions for the `PUT Object` and `DELETE Object` operations, t
 + `s3:RequestObjectTag/<tag-key>` – Use this condition key to restrict the tag keys and values that you want to allow on objects\. This is useful when adding tags to objects using the PutObjectTagging and PutObject, and POST Bucket requests\.
 
 For a complete list of Amazon S3 service\-specific condition keys, see [Available Condition Keys](amazon-s3-policy-keys.md#AvailableKeys-iamV2)\. 
+-->
 
 <!--The following permissions policies illustrate how object tagging enables fine grained access permissions management\. -->
 
+<!--
 
 ## S3 Inventory Overview
 Amazon S3 inventory provides comma-separated values (CSV) or Apache optimized row columnar (ORC) output files that list your objects and their corresponding metadata on a daily or weekly basis for an S3 bucket or a shared prefix.
@@ -150,21 +155,25 @@ When you configure an inventory list for a source bucket, you specify the destin
 5. You will see a confirmation screen similar to this
  ![Object Properties](../images/1-inventory-add3.png)
 
-### View An Existing Bucket Inventory
-Since the inventory is only generated on a daily or weekly basis, we will view an existing inventory in this lab.
+-->
+
+
+## Viewing an Existing S3 Bucket Inventory
+Since the S3 inventory is only generated on a daily or weekly basis, we will view an existing inventory in this lab.
 
 1. Go to the **inventory** sub-folder in your Lab1 folder (`stg209-student-#/lab1/inventory`). You will see three example files.
 
  ![Inventory Objects](/images/1-inventory.png)
 
-The CSV file is an example of what an inventory file will look like.  Feel free to download and view the file on your laptop.
+2. The CSV file is an example of what an inventory file will look like.  Feel free to download and view the file on your laptop.
 ![Inventory Objects](/images/1-inventory-excel.png)
-_Note: the CSV file would normally be gzip compressed, it is uncompressed here for your convenience_
 
-The manifest file is a manifest that describes what is in the inventory CSV file.
+  _Note: the CSV file would normally be gzip compressed, it is uncompressed here for your convenience_
+
+3. The manifest file is a manifest that describes what is in the inventory CSV file.
  ![Inventory Objects](/images/1-inventory-manifest.png)
 
-The checksum file is the MD5 of the content of the manifest.json file
+4. The checksum file is the MD5 of the content of the manifest.json file
 
 ## Lab Complete
 Congratulations!  You have completed Lab 1
