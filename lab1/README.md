@@ -18,7 +18,7 @@ This lab will take you through the process of using object tagging, configuring 
 4. You should see a list of buckets like this:
 ![S3 Console](../images/1-console.png)
 
-5. Each student has two S3 buckets. Unless otherwise specified in the instructions, make sure you use the bucket assigned to you **and without "CRR" in the bucket name. (e.g. make sure to use the bucket with a name like this: stg209-student-1)**
+5. Each student has _two_ S3 buckets. Unless otherwise specified in the instructions, make sure you use the bucket assigned to you **and without "CRR" in the bucket name. (e.g. make sure to use the bucket with a name like this: stg209-student-1)**
 
 <!--
 ## Tagging Overview
@@ -54,7 +54,7 @@ In addition to data classification, tagging offers other benefits such as:
 
 ## S3 Object Tagging Lab 
 
-1. Go to the **[S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1#)**, **click on the name of your S3 bucket** (e.g. **stg209-student-#**), and **go to the Lab1 prefix** (folder)
+1. Go to the **[S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1#)**, **click on the name of your S3 bucket** (e.g. **stg209-student-#**), and **click on the Lab1 folder**
 
 2. Select the checkbox to the left of the first object _**file001.bin**_ to open up the object details view. (_Note: if you clicked on the actual object name it will open up a tabbed view.  Go to the Properties tab, then Tags box_)
 
@@ -72,7 +72,7 @@ In addition to data classification, tagging offers other benefits such as:
  
 6. Click **Save** then **Save Tags**
 
-7. Your object has now been tagged.  Feel free to tag the first 3 objects. 
+7. Your object has now been tagged. 
 
 <!--
 ## Example Uses for S3 Object Tags
