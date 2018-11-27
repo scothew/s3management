@@ -16,7 +16,8 @@ This lab will take you through the process of using object tagging, configuring 
 3. Navigate to the S3 Console by selecting **Services -> Amazon S3** at the upper left
 
 4. You should see a list of buckets like this:
-![S3 Console](../images/1-console.png)
+
+    ![S3 Console](../images/1-console.png)
 
 5. Each student has _two_ S3 buckets. Unless otherwise specified in the instructions, make sure you use the bucket assigned to you **and without "CRR" in the bucket name. (e.g. make sure to use the bucket with a name like this: stg209-student-1)**
 
@@ -24,7 +25,7 @@ This lab will take you through the process of using object tagging, configuring 
 ## Tagging Overview
 Use object tagging to categorize storage. Each tag is a key-value pair that can be assigned during initial upload of an object or to an existing object.
 
- ![Object Tags](../images/2-addtags.png)
+    ![Object Tags](../images/2-addtags.png)
 
 Note the following:
 
@@ -60,15 +61,15 @@ In addition to data classification, tagging offers other benefits such as:
 
 3. Click on the word **Tags** to open the tag editor
 
- ![Object Properties](../images/2-properties-select.png)
+    ![Object Properties](../images/2-properties-select.png)
  
 4. Click the **Add Tag** button
 
- ![Object Properties](../images/2-object-tags.png)
+    ![Object Properties](../images/2-object-tags.png)
 
 5. Add some tags to the objects as shown in the image
 
- ![Object Properties](../images/2-addtags.png)
+    ![Object Properties](../images/2-addtags.png)
  
 6. Click **Save** then **Save Tags**
 
@@ -137,7 +138,8 @@ Amazon S3 inventory provides comma-separated values (CSV) or Apache optimized ro
 You can query Amazon S3 inventory using standard SQL by using Amazon Athena, Amazon Redshift Spectrum, and other tools such as Presto, Apache Hive, and Apache Spark. It's easy to use Athena to run queries on your inventory files. You can use Athena for Amazon S3 inventory queries in all Regions where Athena is available.
 
 The following is an example CSV inventory list opened in a spreadsheet application. The heading row is shown only to help clarify the example; it is not included in the actual list.
- ![Inventory CSV](../images/2-inventory-list.png)
+
+    ![Inventory CSV](../images/2-inventory-list.png)
 
 ## Enabling Inventory Lab
 When you configure an inventory list for a source bucket, you specify the destination bucket where you want the list to be stored and whether you want to generate the list daily or weekly. You can also configure what object metadata to include and whether to list all object versions or only current versions.
@@ -145,15 +147,18 @@ When you configure an inventory list for a source bucket, you specify the destin
 1. Go to the **S3 console**, **select your S3 bucket** (e.g. **stg209-student-#**)
 
 2. Go to the **Management** tab, click the **inventory** button then click **Add new** at the bottom
- ![Object Properties](../images/1-inventory-add.png)
+
+    ![Object Properties](../images/1-inventory-add.png)
 
 3. Configure the inventory settings as desired (be sure to choose your own bucket for the destination bucket **stg209-student-#**).
- ![Object Properties](../images/1-inventory-add2.png)
+
+    ![Object Properties](../images/1-inventory-add2.png)
 
 4. Click **Save**. 
 
 5. You will see a confirmation screen similar to this
- ![Object Properties](../images/1-inventory-add3.png)
+
+    ![Object Properties](../images/1-inventory-add3.png)
 
 -->
 
@@ -163,15 +168,17 @@ Since the S3 inventory is only generated on a daily or weekly basis, we will vie
 
 1. Go to the **inventory** sub-folder in your Lab1 folder (`stg209-student-#/lab1/inventory`). You will see three example files.
 
- ![Inventory Objects](/images/1-inventory.png)
+    ![Inventory Objects](/images/1-inventory.png)
 
 2. The CSV file is an example of what an inventory file will look like.  Feel free to download and view the file on your laptop.
-![Inventory Objects](/images/1-inventory-excel.png)
+
+    ![Inventory Objects](/images/1-inventory-excel.png)
 
     _Note: the CSV file would normally be gzip compressed, it is uncompressed here for your convenience_
 
 3. The manifest file is a manifest that describes what is in the inventory CSV file.
- ![Inventory Objects](/images/1-inventory-manifest.png)
+
+    ![Inventory Objects](/images/1-inventory-manifest.png)
 
 4. The checksum file is the MD5 of the content of the manifest.json file
 
