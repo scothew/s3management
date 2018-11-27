@@ -40,12 +40,14 @@ Amazon S3 APIs support setting (or updating) the storage class of objects with t
 2. Note that the objects are using three different storage classes. The first three objects have **standard** for their object class.
 
 3. Select the checkbox to the left of the first object _**file001.bin**_ to open up the object details view
-![Storage Classes](../images/3-objectdetails.png)
+
+    ![Storage Classes](../images/3-objectdetails.png)
 
 4. Click on **Storage Class** to bring up the **Change Storage Class** window.
 
 5. Click on the radio button for **Standard-IA** and click **save** then **change**
-![Storage Classes](../images/2-changestorageclass.png)
+
+    ![Storage Classes](../images/2-changestorageclass.png)
 
 6. Observe the updated storage class that is now visible on the object overview page in the **storage class** column.
 
@@ -75,12 +77,12 @@ A versioning-enabled bucket can have many versions of the same object, one curre
 1. Go to the [S3 console](https://s3.console.aws.amazon.com/s3/home?region=us-east-1) and select your S3 bucket (e.g **stg209-student-N**)
 
 2. Navigate to the **Management** tab and select **Add lifecycle rule**
- 
- ![S3 Management](../images/3b-management.png)
+
+    ![S3 Management](../images/3b-management.png)
 
 3. **Give the rule a name** and click **next**
- 
- ![S3 Management](../images/3b-lifecycle-1.png)
+
+    ![S3 Management](../images/3b-lifecycle-1.png)
 
 4. Click the checkmarks for both **Current version** and **Previous version**
 
@@ -89,24 +91,24 @@ A versioning-enabled bucket can have many versions of the same object, one curre
 6. Select **Transition to Standard-IA after**. It will automatically select "30" for **Days after creation**
 
 7. Add additional transitions as shown in the graphic (you may need to scroll your browser to see dropdowns for previous versions)
- 
- ![S3 Management](../images/3b-lifecycle-2.png)
+
+    ![S3 Management](../images/3b-lifecycle-2.png)
 
 8. Click **Next**
 
 9. Select **Previous Versions**
- 
- ![S3 Management](../images/3b-lifecycle-3.png)
+
+    ![S3 Management](../images/3b-lifecycle-3.png)
 
 10. Click **Next**
 
 11. Review Settings and click **Save**
- 
- ![S3 Management](../images/3b-lifecycle-4.png)
+
+    ![S3 Management](../images/3b-lifecycle-4.png)
 
 12. You should now see a summary of your lifecycle policy
- 
- ![S3 Management](../images/3b-lifecycle-5.png)
+
+    ![S3 Management](../images/3b-lifecycle-5.png)
 
 
 ## Lab Complete
